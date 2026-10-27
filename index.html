@@ -1,0 +1,3475 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>🎄 จับฉลากของขวัญคริสต์มาส 🎁 | Interactive Christmas Wonderland</title>
+  <meta name="description" content="เว็บไซต์สุ่มชื่อซื้อของขวัญคริสต์มาสให้เพื่อน 💰 งบ 500 บาท 📅 นัดกินข้าวและแลกของขวัญวันที่ 19 ธันวาคม 2569" />
+  <meta name="theme-color" content="#0d2217" />
+
+  <!-- Open Graph for LINE Preview -->
+  <meta property="og:title" content="🎄 ลิงก์จับฉลากของขวัญคริสต์มาสของคุณมาแล้ว! 🎁" />
+  <meta property="og:description" content="กดเข้ามาแกะกล่องของขวัญและขูดหิมะดูชื่อเพื่อนที่คุณต้องซื้อของขวัญให้! 💰 งบ 500 บาท 📅 19 ธันวาคม 2569" />
+  <meta property="og:type" content="website" />
+
+  <!-- Festive SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='10' y='26' width='44' height='32' rx='6' fill='%23D9383A'/%3E%3Crect x='6' y='18' width='52' height='10' rx='4' fill='%23E6484A'/%3E%3Crect x='28' y='18' width='8' height='40' fill='%23F4B942'/%3E%3Crect x='10' y='38' width='44' height='8' fill='%23F4B942'/%3E%3Cpath d='M32 18 C22 6, 14 14, 26 18 C14 14, 22 6, 32 18 Z' fill='%23F4B942' stroke='%23F4B942' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M32 18 C42 6, 50 14, 38 18' fill='none' stroke='%23F4B942' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Mali (Cute Display) & Kanit (Clean Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Mali:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* Cozy Cute Christmas Wonderland Palette */
+      --bg-night-top: #091912;
+      --bg-pine-deep: #0f291e;
+      --bg-pine-mid: #183d2c;
+      --bg-pine-soft: #21523b;
+
+      --card-cream: #fffdf8;
+      --card-cream-warm: #fdf5e6;
+      --card-border: #e6d3b8;
+
+      --santa-red: #d93438;
+      --santa-red-dark: #ab1f23;
+      --santa-red-soft: #fff0f0;
+
+      --holly-green: #1e6b41;
+      --holly-green-dark: #134a2c;
+      --holly-green-soft: #ecf8f1;
+
+      --line-green: #06c755;
+      --line-green-dark: #05a847;
+
+      --star-gold: #f5b83d;
+      --star-gold-dark: #c98a14;
+      --star-gold-soft: #fff8e5;
+
+      --text-ink: #2b1c16;
+      --text-muted: #6b564b;
+      --text-light: #967f73;
+
+      --font-display: 'Mali', 'Kanit', sans-serif;
+      --font-body: 'Kanit', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --radius-xl: 30px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --radius-pill: 999px;
+
+      --shadow-card: 0 24px 60px rgba(4, 14, 9, 0.55), 0 6px 20px rgba(4, 14, 9, 0.3);
+      --shadow-btn-red: 0 6px 0 #8f181b, 0 12px 24px rgba(217, 52, 56, 0.38);
+      --shadow-btn-green: 0 5px 0 #114227, 0 8px 18px rgba(30, 107, 65, 0.28);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background:
+        radial-gradient(ellipse at 50% -10%, rgba(56, 168, 109, 0.25) 0%, transparent 55%),
+        radial-gradient(circle at 85% 12%, rgba(245, 184, 61, 0.14) 0%, transparent 35%),
+        linear-gradient(180deg, var(--bg-night-top) 0%, var(--bg-pine-deep) 40%, var(--bg-pine-mid) 80%, #1d4633 100%);
+      color: var(--text-ink);
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 66px 14px 190px;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.55;
+      transition: background 0.6s ease;
+    }
+
+    body.blizzard-mode {
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(74, 222, 155, 0.36) 0%, rgba(56, 189, 248, 0.18) 45%, transparent 70%),
+        linear-gradient(180deg, #06131c 0%, #0d262b 45%, #163d35 85%, #1d4d3e 100%);
+    }
+
+    /* =====================================================
+       HANGING INTERACTIVE CHRISTMAS LIGHTS
+       ===================================================== */
+    .christmas-lights-wire {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 42px;
+      z-index: 25;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 0 8px;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(6, 18, 12, 0.65) 0%, transparent 100%);
+    }
+
+    .light-bulb {
+      width: 13px;
+      height: 20px;
+      border-radius: 50% 50% 50% 50% / 38% 38% 62% 62%;
+      margin-top: 7px;
+      position: relative;
+      pointer-events: auto;
+      cursor: pointer;
+      animation: twinkle 2.1s infinite ease-in-out alternate;
+      transition: transform 0.15s ease;
+    }
+
+    .light-bulb:hover {
+      transform: scale(1.35) rotate(8deg);
+    }
+
+    .light-bulb::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 3.5px;
+      width: 6px;
+      height: 6px;
+      background: #2b4c3b;
+      border-radius: 2px;
+    }
+
+    .light-bulb.red {
+      background: #ff4d4d;
+      box-shadow: 0 0 16px #ff4d4d, 0 0 6px #ffffff;
+    }
+    .light-bulb.gold {
+      background: #ffd166;
+      box-shadow: 0 0 16px #ffd166, 0 0 6px #ffffff;
+      animation-delay: 0.5s;
+    }
+    .light-bulb.green {
+      background: #4ade80;
+      box-shadow: 0 0 16px #4ade80, 0 0 6px #ffffff;
+      animation-delay: 1.0s;
+    }
+    .light-bulb.ice {
+      background: #7dd3fc;
+      box-shadow: 0 0 16px #7dd3fc, 0 0 6px #ffffff;
+      animation-delay: 1.5s;
+    }
+
+    body.disco-lights .light-bulb {
+      animation-duration: 0.45s !important;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.48; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+
+    /* =====================================================
+       COLLECTOR'S INTERACTIVE SNOW GLOBE & LIVING TREE STAGE
+       (Replaces plain top buttons with living Christmas art)
+       ===================================================== */
+    .snow-globe-stage {
+      position: relative;
+      z-index: 26;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: -6px auto 18px;
+      width: 100%;
+      max-width: 360px;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .snow-globe-dome {
+      position: relative;
+      width: 248px;
+      height: 228px;
+      border-radius: 50% 50% 44% 44% / 54% 54% 42% 42%;
+      background:
+        radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.05) 36%, transparent 60%),
+        radial-gradient(circle at 50% 35%, rgba(29, 78, 89, 0.55) 0%, rgba(10, 31, 23, 0.88) 78%, rgba(6, 19, 14, 0.96) 100%);
+      border: 3px solid rgba(255, 253, 245, 0.65);
+      box-shadow:
+        inset 0 10px 26px rgba(255, 255, 255, 0.38),
+        inset 0 -14px 24px rgba(186, 230, 253, 0.25),
+        0 16px 40px rgba(0, 0, 0, 0.48),
+        0 0 28px rgba(245, 184, 61, 0.22);
+      overflow: hidden;
+      cursor: pointer;
+      transform-origin: center bottom;
+      transition: transform 0.25s ease, box-shadow 0.3s ease;
+    }
+
+    .snow-globe-dome:hover {
+      box-shadow:
+        inset 0 12px 30px rgba(255, 255, 255, 0.45),
+        inset 0 -14px 28px rgba(245, 184, 61, 0.3),
+        0 18px 46px rgba(0, 0, 0, 0.55),
+        0 0 38px rgba(245, 184, 61, 0.42);
+    }
+
+    .snow-globe-dome.shaking {
+      animation: globeShake 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+    }
+
+    @keyframes globeShake {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      20% { transform: rotate(-9deg) scale(1.04) translateY(-4px); }
+      40% { transform: rotate(9deg) scale(1.04) translateY(-4px); }
+      60% { transform: rotate(-6deg) scale(1.02); }
+      80% { transform: rotate(5deg) scale(1.01); }
+    }
+
+    /* Glass Specular Reflection Arc */
+    .globe-glass-glare {
+      position: absolute;
+      top: 14px;
+      left: 18px;
+      width: 68px;
+      height: 110px;
+      border-radius: 50%;
+      border-left: 5px solid rgba(255, 255, 255, 0.42);
+      transform: rotate(22deg);
+      pointer-events: none;
+      z-index: 12;
+    }
+
+    /* Full Moon inside Snow Globe (Click to Summon Santa & Parachute Gifts) */
+    .globe-full-moon {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #fffef5 0%, #fde68a 55%, #f59e0b 100%);
+      box-shadow: 0 0 24px #fbbf24, 0 0 45px rgba(251, 191, 36, 0.55);
+      z-index: 4;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .globe-full-moon:hover {
+      transform: scale(1.14);
+      box-shadow: 0 0 32px #fde047, 0 0 60px rgba(251, 191, 36, 0.85);
+    }
+
+    .moon-santa-silhouette {
+      font-size: 0.95rem;
+      opacity: 0.82;
+      filter: brightness(0.15);
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+
+    /* Living Christmas Tree SVG inside Globe */
+    .globe-tree-svg {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 176px;
+      height: 186px;
+      z-index: 6;
+      overflow: visible;
+    }
+
+    /* Glowing Star Topper (Click to Play/Pause Music Box) */
+    .tree-star-topper {
+      cursor: pointer;
+      transform-origin: 100px 26px;
+      animation: starPulse 2s infinite ease-in-out alternate;
+      filter: drop-shadow(0 0 10px #fbbf24);
+    }
+
+    .tree-star-topper:hover {
+      transform: scale(1.25) rotate(15deg);
+    }
+
+    body.music-playing .tree-star-topper {
+      animation: starMusicSpin 3s infinite linear;
+      filter: drop-shadow(0 0 16px #fde047) drop-shadow(0 0 28px #f59e0b);
+    }
+
+    @keyframes starPulse {
+      0% { transform: scale(0.94); }
+      100% { transform: scale(1.1); }
+    }
+
+    @keyframes starMusicSpin {
+      0% { transform: rotate(0deg) scale(1.12); }
+      50% { transform: rotate(180deg) scale(1.22); }
+      100% { transform: rotate(360deg) scale(1.12); }
+    }
+
+    /* Dynamic Player Ornaments Hanging on the Living Tree */
+    .tree-ornaments-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 9;
+      pointer-events: none;
+    }
+
+    .tree-bauble {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 0.68rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset -2px -3px 5px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.4);
+      border: 1.5px solid rgba(255, 255, 255, 0.75);
+      pointer-events: auto;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: transform 0.2s ease;
+    }
+
+    .tree-bauble::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      width: 6px;
+      height: 4px;
+      background: #fcd34d;
+      border-radius: 1px;
+    }
+
+    .tree-bauble:hover {
+      transform: translate(-50%, -50%) scale(1.35);
+      z-index: 15;
+    }
+
+    /* Inner Snow Drift Floor inside Globe */
+    .globe-inner-snowfloor {
+      position: absolute;
+      bottom: -8px;
+      left: -10%;
+      width: 120%;
+      height: 40px;
+      background: linear-gradient(180deg, #ffffff 0%, #dbeafe 100%);
+      border-radius: 50% 50% 0 0;
+      z-index: 5;
+      box-shadow: 0 -4px 12px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Collector's Wooden & Brass Wind-Up Base */
+    .snow-globe-base {
+      position: relative;
+      margin-top: -16px;
+      z-index: 14;
+      width: 224px;
+      background: linear-gradient(90deg, #451a03 0%, #78350f 30%, #92400e 50%, #78350f 70%, #451a03 100%);
+      border: 2.5px solid #d97706;
+      border-radius: 16px 16px 26px 26px;
+      padding: 8px 14px 10px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(254, 243, 199, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .brass-plaque {
+      flex: 1;
+      background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #b45309 100%);
+      border-radius: var(--radius-pill);
+      padding: 4px 10px;
+      color: #291002;
+      font-family: var(--font-body);
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: inset 0 1px 2px #ffffff, 0 2px 5px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brass-windup-key {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fef08a 0%, #d97706 85%);
+      border: 2px solid #fffbeb;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .brass-windup-key:hover {
+      transform: scale(1.15) rotate(25deg);
+    }
+
+    body.music-playing .brass-windup-key {
+      animation: windupKeyTurn 2.2s infinite linear;
+      box-shadow: 0 0 14px #fde047;
+    }
+
+    @keyframes windupKeyTurn {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Interactive Whispering Guide under Snow Globe */
+    .globe-magic-guide {
+      margin-top: 7px;
+      font-size: 0.76rem;
+      color: rgba(254, 243, 199, 0.9);
+      text-align: center;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* =====================================================
+       FALLING PARACHUTE MYSTERY GIFTS
+       ===================================================== */
+    #parachute-gifts-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 45;
+      overflow: hidden;
+    }
+
+    .parachute-gift-item {
+      position: absolute;
+      top: -90px;
+      pointer-events: auto;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.4));
+      animation: parachuteFall 10.5s linear forwards;
+    }
+
+    .parachute-canopy {
+      font-size: 2.1rem;
+      line-height: 0.9;
+      animation: parachuteSway 1.8s infinite ease-in-out alternate;
+    }
+
+    .parachute-box {
+      font-size: 1.85rem;
+      line-height: 1;
+      margin-top: -2px;
+      animation: parachuteSway 1.8s infinite ease-in-out alternate-reverse;
+    }
+
+    .parachute-tag {
+      background: var(--star-gold);
+      color: #2b1700;
+      font-size: 0.66rem;
+      font-weight: 700;
+      padding: 1px 7px;
+      border-radius: var(--radius-pill);
+      margin-top: 2px;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes parachuteFall {
+      0% { transform: translateY(0); opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(112vh); opacity: 0; }
+    }
+
+    @keyframes parachuteSway {
+      0% { transform: translateX(-14px) rotate(-8deg); }
+      100% { transform: translateX(14px) rotate(8deg); }
+    }
+
+    /* =====================================================
+       FLYING SANTA SLEIGH ACROSS THE SKY
+       ===================================================== */
+    .santa-sky-track {
+      position: fixed;
+      top: 58px;
+      left: -380px;
+      z-index: 28;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+    }
+
+    .santa-sky-track.flying {
+      animation: santaFlyAcross 7.5s linear forwards;
+    }
+
+    .santa-sleigh-group {
+      font-size: clamp(1.6rem, 4.5vw, 2.25rem);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      animation: sleighBob 0.9s infinite ease-in-out alternate;
+    }
+
+    @keyframes santaFlyAcross {
+      0% { transform: translateX(0) translateY(15px) rotate(-3deg); }
+      25% { transform: translateX(35vw) translateY(-10px) rotate(1deg); }
+      50% { transform: translateX(70vw) translateY(8px) rotate(-2deg); }
+      75% { transform: translateX(105vw) translateY(-12px) rotate(2deg); }
+      100% { transform: translateX(145vw) translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes sleighBob {
+      0% { transform: translateY(-4px); }
+      100% { transform: translateY(4px); }
+    }
+
+    /* =====================================================
+       BACKGROUND & FOREGROUND CANVASES
+       ===================================================== */
+    #snow-canvas, #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    #snow-canvas { z-index: 2; }
+    #confetti-canvas { z-index: 60; }
+
+    /* =====================================================
+       MAIN POSTCARD SHELL WITH HOLLY GARLAND & BELLS
+       ===================================================== */
+    .app-shell {
+      position: relative;
+      z-index: 15;
+      width: 100%;
+      max-width: 550px;
+      margin-top: 8px;
+    }
+
+    /* Snowcap Roof & Interactive Holly Bells on Top of Card */
+    .card-rooftop-decor {
+      position: relative;
+      height: 34px;
+      margin-bottom: -14px;
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      pointer-events: none;
+    }
+
+    .holly-bell-emblem {
+      pointer-events: auto;
+      cursor: pointer;
+      width: 96px;
+      height: 64px;
+      margin-top: -14px;
+      filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28));
+      transform-origin: top center;
+      transition: transform 0.2s ease;
+    }
+
+    .holly-bell-emblem:hover,
+    .holly-bell-emblem.ringing {
+      animation: bellSwing 0.65s ease-in-out;
+    }
+
+    @keyframes bellSwing {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      20% { transform: rotate(16deg) scale(1.08); }
+      40% { transform: rotate(-14deg) scale(1.08); }
+      60% { transform: rotate(10deg) scale(1.05); }
+      80% { transform: rotate(-6deg) scale(1.02); }
+    }
+
+    /* Hanging Corner Stocking & Candy Cane */
+    .corner-prop {
+      position: absolute;
+      top: -12px;
+      font-size: 2rem;
+      z-index: 22;
+      cursor: pointer;
+      filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.25));
+      user-select: none;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .corner-prop.left {
+      left: 12px;
+      transform: rotate(-14deg);
+    }
+    .corner-prop.right {
+      right: 12px;
+      transform: rotate(14deg);
+    }
+    .corner-prop:hover {
+      transform: scale(1.25) rotate(0deg);
+    }
+
+    .postcard {
+      background: var(--card-cream);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      border: 4px solid #ffffff;
+      position: relative;
+    }
+
+    /* Candy Cane Striped Top & Bottom Ribbon */
+    .candy-stripe {
+      height: 15px;
+      width: 100%;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--santa-red) 0px,
+        var(--santa-red) 14px,
+        #fffdf7 14px,
+        #fffdf7 26px,
+        var(--holly-green) 26px,
+        var(--holly-green) 40px,
+        #fffdf7 40px,
+        #fffdf7 50px,
+        var(--star-gold) 50px,
+        var(--star-gold) 58px,
+        #fffdf7 58px,
+        #fffdf7 68px
+      );
+      border-bottom: 2px solid var(--card-border);
+    }
+
+    .card-inner {
+      padding: 30px 20px 30px;
+    }
+
+    @media (min-width: 480px) {
+      .card-inner {
+        padding: 36px 30px 34px;
+      }
+    }
+
+    /* =====================================================
+       HERO HEADER & CHRISTMAS COUNTDOWN TIMER
+       ===================================================== */
+    .hero-header {
+      text-align: center;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .santa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--santa-red-soft);
+      color: var(--santa-red-dark);
+      border: 1.5px dashed #f09fa1;
+      padding: 5px 15px;
+      border-radius: var(--radius-pill);
+      font-size: 0.84rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.55rem, 5.5vw, 2.1rem);
+      font-weight: 700;
+      color: var(--text-ink);
+      line-height: 1.28;
+      margin-bottom: 6px;
+    }
+
+    .hero-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Christmas Countdown Widget */
+    .countdown-banner {
+      background: linear-gradient(135deg, #153c28 0%, #1e5237 100%);
+      color: #fffdf7;
+      border-radius: var(--radius-lg);
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      border: 2px solid var(--star-gold);
+      box-shadow: 0 6px 16px rgba(21, 60, 40, 0.2);
+      text-align: center;
+    }
+
+    .countdown-label {
+      font-size: 0.78rem;
+      color: #ffd984;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    .cd-box {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 217, 132, 0.35);
+      border-radius: var(--radius-sm);
+      padding: 6px 4px;
+    }
+
+    .cd-num {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      display: block;
+    }
+
+    .cd-unit {
+      font-size: 0.68rem;
+      color: #d7f2e3;
+    }
+
+    /* Event Info Pills (Budget & Date) */
+    .event-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: var(--card-cream-warm);
+      border: 2px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 14px 16px;
+      margin-bottom: 22px;
+      position: relative;
+    }
+
+    .event-pill-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .event-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+
+    .event-icon.budget {
+      background: var(--star-gold-soft);
+      border: 1.5px solid #f5d487;
+    }
+
+    .event-icon.date {
+      background: var(--holly-green-soft);
+      border: 1.5px solid #a9dfc0;
+    }
+
+    .event-pill-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .event-pill-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      display: block;
+    }
+
+    .event-pill-value {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text-ink);
+      word-break: break-word;
+    }
+
+    .edit-event-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      border-radius: var(--radius-pill);
+      padding: 3px 10px;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .edit-event-toggle:hover {
+      background: var(--star-gold-soft);
+      color: var(--text-ink);
+      border-color: var(--star-gold);
+    }
+
+    .event-settings-panel {
+      background: #ffffff;
+      border: 2px dashed var(--star-gold);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .event-settings-panel.open {
+      display: block;
+      animation: fadeSlideDown 0.22s ease;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 11px 14px;
+      border: 2px solid var(--card-border);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      color: var(--text-ink);
+      background: #ffffff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: var(--holly-green);
+      box-shadow: 0 0 0 3px rgba(30, 107, 65, 0.14);
+    }
+
+    /* Section Headings */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-ink);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .count-badge {
+      background: var(--holly-green);
+      color: #ffffff;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: var(--radius-pill);
+    }
+
+    /* Add Player Form */
+    .add-player-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      border-radius: var(--radius-md);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+      text-decoration: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:active {
+      transform: translateY(2px);
+    }
+
+    .btn-add {
+      background: var(--holly-green);
+      color: #ffffff;
+      padding: 0 18px;
+      font-size: 0.96rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-btn-green);
+    }
+
+    .btn-add:hover {
+      background: var(--holly-green-dark);
+    }
+
+    .helper-hint {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      margin-bottom: 14px;
+    }
+
+    /* Ornament Player Chips */
+    .player-tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 18px;
+      min-height: 58px;
+      padding: 14px 12px;
+      background: #ffffff;
+      border: 2px dashed var(--card-border);
+      border-radius: var(--radius-lg);
+      align-items: center;
+    }
+
+    .empty-players-msg {
+      width: 100%;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      padding: 8px 4px;
+    }
+
+    .player-tag {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: linear-gradient(180deg, #fffdf9 0%, var(--card-cream-warm) 100%);
+      border: 1.5px solid #dfc8ab;
+      border-radius: var(--radius-pill);
+      padding: 6px 10px 6px 10px;
+      font-size: 0.93rem;
+      font-weight: 500;
+      color: var(--text-ink);
+      box-shadow: 0 3px 8px rgba(44, 30, 24, 0.07);
+      animation: popIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-origin: top center;
+      cursor: pointer;
+    }
+
+    .player-tag:hover {
+      animation: ornamentSwing 0.55s ease-in-out;
+      border-color: var(--star-gold);
+    }
+
+    @keyframes ornamentSwing {
+      0%, 100% { transform: rotate(0deg); }
+      30% { transform: rotate(5deg); }
+      65% { transform: rotate(-4deg); }
+    }
+
+    .player-num {
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .player-num.ornament-red { background: var(--santa-red); }
+    .player-num.ornament-green { background: var(--holly-green); }
+    .player-num.ornament-gold { background: #d99316; }
+
+    .player-remove-btn {
+      background: rgba(217, 52, 56, 0.12);
+      color: var(--santa-red-dark);
+      border: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .player-remove-btn:hover {
+      background: var(--santa-red);
+      color: #ffffff;
+      transform: scale(1.12);
+    }
+
+    /* Primary Draw Button */
+    .btn-draw-main {
+      width: 100%;
+      padding: 15px 20px;
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      font-weight: 700;
+      background: linear-gradient(180deg, #ea464a 0%, var(--santa-red) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-btn-red);
+      margin-bottom: 10px;
+    }
+
+    .btn-draw-main:hover:not(:disabled) {
+      background: linear-gradient(180deg, #f25458 0%, var(--santa-red-dark) 100%);
+    }
+
+    .btn-draw-main:disabled {
+      background: #d5c7bc;
+      color: #8c7b70;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+
+    .text-btn-clear {
+      background: transparent;
+      border: none;
+      color: var(--santa-red-dark);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 4px 8px;
+    }
+
+    /* =====================================================
+       SANTA'S MAGIC SACK SHUFFLE ANIMATION OVERLAY
+       ===================================================== */
+    .santa-shuffle-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 25, 18, 0.86);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 80;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      color: #fffdf7;
+    }
+
+    .santa-sack-stage {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .santa-sack-icon {
+      font-size: 6.2rem;
+      filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.45));
+      animation: vigorousSackShake 0.38s infinite ease-in-out;
+    }
+
+    .whirling-name-pill {
+      position: absolute;
+      background: var(--star-gold);
+      color: #3b2504;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      animation: orbitSack 1.1s infinite ease-in-out alternate;
+    }
+
+    @keyframes vigorousSackShake {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      25% { transform: rotate(-14deg) scale(1.08) translateY(-6px); }
+      50% { transform: rotate(12deg) scale(0.96) translateY(4px); }
+      75% { transform: rotate(-10deg) scale(1.06) translateY(-4px); }
+    }
+
+    @keyframes orbitSack {
+      0% { transform: translate(-55px, -45px) rotate(-12deg) scale(0.9); }
+      100% { transform: translate(55px, -35px) rotate(12deg) scale(1.1); }
+    }
+
+    /* =====================================================
+       GENERATED SECRET LINKS SECTION
+       ===================================================== */
+    .links-section {
+      margin-top: 26px;
+      padding-top: 24px;
+      border-top: 2px dashed var(--card-border);
+      animation: fadeSlideDown 0.35s ease;
+    }
+
+    .privacy-shield-banner {
+      background: var(--holly-green-soft);
+      border: 1.5px solid #a9dfc0;
+      border-radius: var(--radius-md);
+      padding: 11px 14px;
+      font-size: 0.84rem;
+      color: var(--holly-green-dark);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+    }
+
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .friend-link-card {
+      background: #ffffff;
+      border: 2px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .friend-link-card.sent {
+      background: #f6fcf8;
+      border-color: #98d6b2;
+    }
+
+    .friend-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 120px;
+      flex: 1;
+    }
+
+    .friend-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--santa-red-soft);
+      color: var(--santa-red-dark);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1.5px solid #f3b6b7;
+    }
+
+    .friend-link-card.sent .friend-avatar {
+      background: var(--holly-green-soft);
+      color: var(--holly-green-dark);
+      border-color: #9fd8b6;
+    }
+
+    .friend-name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-ink);
+      word-break: break-word;
+    }
+
+    .sent-status {
+      font-size: 0.74rem;
+      color: var(--text-light);
+      display: block;
+    }
+
+    .friend-link-card.sent .sent-status {
+      color: var(--holly-green);
+      font-weight: 600;
+    }
+
+    .friend-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .btn-line-share {
+      background: var(--line-green);
+      color: #ffffff;
+      padding: 8px 12px;
+      font-size: 0.84rem;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 3px 0 #04933c;
+    }
+
+    .btn-copy-link {
+      background: var(--card-cream-warm);
+      color: var(--text-ink);
+      border: 1.5px solid var(--card-border);
+      padding: 7px 11px;
+      font-size: 0.84rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-open-self {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px dashed var(--card-border);
+      padding: 7px 9px;
+      font-size: 0.78rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-copy-all {
+      width: 100%;
+      padding: 13px 16px;
+      background: var(--star-gold-soft);
+      color: #5c3d04;
+      border: 2px solid var(--star-gold);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .local-file-notice {
+      margin-top: 14px;
+      background: #fff9eb;
+      border: 1.5px dashed #f0b429;
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      font-size: 0.82rem;
+      color: #7c5205;
+    }
+
+    /* =====================================================
+       PLAYER 3-STEP UNBOXING & FROST SCRATCH REVEAL
+       ===================================================== */
+    .player-reveal-container {
+      text-align: center;
+      padding: 4px 0 8px;
+    }
+
+    .recipient-greeting-box {
+      background: linear-gradient(135deg, #fff4f4 0%, #fffdf8 100%);
+      border: 2px solid #f4c2c3;
+      border-radius: var(--radius-lg);
+      padding: 16px 14px;
+      margin-bottom: 18px;
+    }
+
+    .greeting-eyebrow {
+      font-size: 0.84rem;
+      color: var(--santa-red-dark);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .greeting-player-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 6vw, 2rem);
+      font-weight: 700;
+      color: var(--santa-red);
+      margin-bottom: 6px;
+    }
+
+    .greeting-warning {
+      font-size: 0.79rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.85);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid #eed6d6;
+    }
+
+    /* 3-Step Unbox Progress Bar */
+    .unbox-step-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--star-gold-soft);
+      border: 1.5px solid var(--star-gold);
+      color: #6b4604;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .gift-stage {
+      position: relative;
+      margin: 14px auto 18px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .gift-glow {
+      position: absolute;
+      inset: 8px;
+      background: radial-gradient(circle, rgba(245, 184, 61, 0.5) 0%, rgba(245, 184, 61, 0) 70%);
+      border-radius: 50%;
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    .gift-svg {
+      width: 175px;
+      height: 175px;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 14px 20px rgba(44, 30, 24, 0.24));
+      animation: idleBounce 2.2s infinite ease-in-out;
+      transform-origin: center bottom;
+    }
+
+    /* Step 1: Ribbon Untied */
+    .gift-stage.step-1 .gift-bow-group {
+      transform: translateY(-48px) scale(0.2) rotate(35deg);
+      opacity: 0;
+      transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gift-stage.step-1 .gift-svg {
+      animation: excitedShake 0.52s infinite ease-in-out;
+    }
+
+    /* Step 2: Vigorous Shaking & Golden Light */
+    .gift-stage.step-2 .gift-svg {
+      animation: superShake 0.26s infinite ease-in-out;
+    }
+    .gift-stage.step-2 .gift-glow {
+      background: radial-gradient(circle, rgba(255, 209, 102, 0.85) 0%, rgba(217, 52, 56, 0.35) 55%, transparent 75%);
+      transform: scale(1.25);
+    }
+
+    /* Step 3: Lid Blast Open */
+    .gift-lid-group, .gift-bow-group {
+      transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.45s ease;
+      transform-origin: center 65px;
+    }
+
+    .gift-stage.opening .gift-lid-group {
+      transform: translateY(-75px) rotate(-22deg) scale(1.08);
+      opacity: 0;
+    }
+
+    @keyframes idleBounce {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-6px) rotate(-2deg); }
+      75% { transform: translateY(-4px) rotate(2deg); }
+    }
+
+    @keyframes excitedShake {
+      0%, 100% { transform: rotate(0deg) scale(1.03); }
+      25% { transform: rotate(-6deg) scale(1.06); }
+      75% { transform: rotate(6deg) scale(1.06); }
+    }
+
+    @keyframes superShake {
+      0%, 100% { transform: rotate(0deg) scale(1.08); }
+      25% { transform: rotate(-11deg) scale(1.1) translateY(-4px); }
+      75% { transform: rotate(11deg) scale(1.1) translateY(-4px); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(0.95); opacity: 0.7; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+
+    /* Secret Target Card + Interactive Frost Scratch Canvas */
+    .reveal-result-card {
+      display: none;
+      background: linear-gradient(180deg, #fffdf5 0%, #fff5dc 100%);
+      border: 3px solid var(--star-gold);
+      border-radius: var(--radius-xl);
+      padding: 24px 16px 22px;
+      margin: 12px 0 18px;
+      box-shadow: 0 14px 36px rgba(212, 148, 28, 0.22);
+      position: relative;
+      animation: popIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .reveal-result-card.visible {
+      display: block;
+    }
+
+    .reveal-eyebrow {
+      font-size: 0.94rem;
+      color: #875c0a;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .target-name-frame {
+      position: relative;
+      background: #ffffff;
+      border: 2.5px dashed var(--santa-red);
+      border-radius: var(--radius-lg);
+      padding: 24px 16px;
+      margin: 8px auto 12px;
+      max-width: 390px;
+      min-height: 104px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 0 4px #fff5f5;
+      overflow: hidden;
+    }
+
+    .target-name-frame.blurred .target-name-text {
+      filter: blur(14px);
+      user-select: none;
+    }
+
+    .target-name-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 7vw, 2.35rem);
+      font-weight: 700;
+      color: var(--santa-red);
+      line-height: 1.25;
+      word-break: break-word;
+      transition: filter 0.25s ease;
+    }
+
+    /* Interactive Frost Scratch Overlay Canvas */
+    #frost-scratch-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+      touch-action: none;
+      z-index: 5;
+      transition: opacity 0.45s ease;
+    }
+
+    #frost-scratch-canvas.cleared {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .scratch-helper-bar {
+      margin-bottom: 12px;
+    }
+
+    .btn-clear-frost {
+      background: var(--holly-green-soft);
+      color: var(--holly-green-dark);
+      border: 1.5px solid #96d6b2;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      border-radius: var(--radius-pill);
+    }
+
+    .secret-whisper {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .btn-peek-toggle {
+      background: #ffffff;
+      color: var(--text-ink);
+      border: 1.5px solid var(--card-border);
+      padding: 8px 16px;
+      font-size: 0.84rem;
+      border-radius: var(--radius-pill);
+    }
+
+    /* =====================================================
+       INTERACTIVE WINTER WONDERLAND VILLAGE (BOTTOM SCENE)
+       ===================================================== */
+    .winter-village-scene {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 135px;
+      z-index: 8;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .snow-hill-back {
+      position: absolute;
+      bottom: -28px;
+      left: -10%;
+      width: 120%;
+      height: 95px;
+      background: linear-gradient(180deg, #dceef2 0%, #bfd9e0 100%);
+      border-radius: 50% 50% 0 0;
+      opacity: 0.88;
+    }
+
+    .snow-hill-front {
+      position: absolute;
+      bottom: -35px;
+      left: -5%;
+      width: 110%;
+      height: 88px;
+      background: linear-gradient(180deg, #ffffff 0%, #e6f2f5 100%);
+      border-radius: 50% 50% 0 0;
+      box-shadow: 0 -6px 25px rgba(255, 255, 255, 0.35);
+    }
+
+    .village-props-wrap {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 720px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 18px;
+      pointer-events: none;
+    }
+
+    .interactive-prop {
+      pointer-events: auto;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      position: relative;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      filter: drop-shadow(0 6px 10px rgba(9, 25, 18, 0.32));
+    }
+
+    .interactive-prop:hover {
+      transform: scale(1.16) translateY(-4px);
+    }
+
+    .interactive-prop.jumping {
+      animation: propHappyJump 0.55s ease;
+    }
+
+    .prop-group-left, .prop-group-right {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .prop-tree { font-size: clamp(2.4rem, 6vw, 3.2rem); line-height: 1; }
+    .prop-snowman { font-size: clamp(2.1rem, 5.5vw, 2.8rem); line-height: 1; }
+    .prop-cabin { font-size: clamp(2rem, 5vw, 2.6rem); line-height: 1; }
+
+    .prop-tooltip {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-4px);
+      background: var(--card-cream);
+      color: var(--text-ink);
+      border: 1.5px solid var(--star-gold);
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      font-size: 0.7rem;
+      font-weight: 600;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .interactive-prop:hover .prop-tooltip,
+    .interactive-prop.show-bubble .prop-tooltip {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-8px);
+    }
+
+    @keyframes propHappyJump {
+      0%, 100% { transform: translateY(0) scale(1); }
+      40% { transform: translateY(-18px) scale(1.2) rotate(-8deg); }
+      75% { transform: translateY(-6px) scale(1.1) rotate(8deg); }
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 20px;
+      text-align: center;
+      color: rgba(255, 253, 247, 0.85);
+      font-size: 0.82rem;
+      z-index: 15;
+      position: relative;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .site-footer a {
+      color: #ffd166;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* Toast Notification */
+    .toast-container {
+      position: fixed;
+      bottom: 110px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #142b1f;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+      border: 1.5px solid var(--star-gold);
+      font-size: 0.9rem;
+      font-weight: 500;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      max-width: 92vw;
+      text-align: center;
+    }
+
+    .toast-container.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.88); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeSlideDown {
+      0% { opacity: 0; transform: translateY(-8px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hanging Interactive Christmas Lights (Tap any bulb to chime!) -->
+  <div class="christmas-lights-wire" id="lights-wire" title="แตะหลอดไฟเพื่อบรรเลงเสียงกระดิ่ง!">
+    <span class="light-bulb red" data-note="523.25"></span>
+    <span class="light-bulb gold" data-note="587.33"></span>
+    <span class="light-bulb green" data-note="659.25"></span>
+    <span class="light-bulb ice" data-note="698.46"></span>
+    <span class="light-bulb red" data-note="783.99"></span>
+    <span class="light-bulb gold" data-note="880.00"></span>
+    <span class="light-bulb green" data-note="987.77"></span>
+    <span class="light-bulb ice" data-note="1046.50"></span>
+    <span class="light-bulb red" data-note="783.99"></span>
+    <span class="light-bulb gold" data-note="659.25"></span>
+    <span class="light-bulb green" data-note="587.33"></span>
+    <span class="light-bulb ice" data-note="523.25"></span>
+  </div>
+
+  <!-- Flying Santa & Reindeer Across the Sky -->
+  <div class="santa-sky-track" id="santa-sky-track" aria-hidden="true">
+    <div class="santa-sleigh-group">🦌🦌🛷🎅🎁✨</div>
+  </div>
+
+  <!-- Interactive Snow & Sparkle Trail Canvas + Confetti Canvas + Falling Parachute Gifts -->
+  <canvas id="snow-canvas" aria-hidden="true"></canvas>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+  <div id="parachute-gifts-layer" aria-live="polite"></div>
+
+  <!-- Collector's Interactive Snow Globe & Living Christmas Tree Stage -->
+  <section class="snow-globe-stage" aria-label="ลูกแก้วหิมะไขลานและต้นคริสต์มาสมีชีวิต">
+    <div class="snow-globe-dome" id="snow-globe-dome" title="แตะเขย่าลูกแก้วหิมะเพื่อเรียกพายุหิมะและแสงเหนือ!">
+      <div class="globe-glass-glare" aria-hidden="true"></div>
+
+      <!-- Glowing Golden Full Moon (Click to summon Santa & Parachute Gifts) -->
+      <div class="globe-full-moon" id="globe-full-moon" role="button" tabindex="0" title="แตะพระจันทร์เต็มดวงเพื่อเรียกซานต้าปล่อยของขวัญร่มชูชีพ!">
+        <span class="moon-santa-silhouette">🛷🦌</span>
+      </div>
+
+      <!-- Living 3-Tier Christmas Tree SVG inside Globe -->
+      <svg class="globe-tree-svg" viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
+        <!-- Tree Trunk -->
+        <rect x="86" y="168" width="28" height="32" rx="4" fill="#5C2E0E" />
+        <!-- Bottom Pine Tier -->
+        <path d="M100 78 L24 174 Q100 186 176 174 Z" fill="#14532D" stroke="#0A2E18" stroke-width="2.5" />
+        <path d="M100 78 L32 170 Q100 180 168 170 Z" fill="#166534" />
+        <!-- Middle Pine Tier -->
+        <path d="M100 50 L38 134 Q100 144 162 134 Z" fill="#15803D" stroke="#0A2E18" stroke-width="2" />
+        <!-- Top Pine Tier -->
+        <path d="M100 26 L54 94 Q100 102 146 94 Z" fill="#16A34A" stroke="#0A2E18" stroke-width="2" />
+        <!-- Golden Tinsel Garland Ribbons -->
+        <path d="M62 84 Q100 98 138 82" fill="none" stroke="#FDE047" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round" />
+        <path d="M46 126 Q100 144 152 122" fill="none" stroke="#FDE047" stroke-width="3.5" stroke-dasharray="4 5" stroke-linecap="round" />
+        <path d="M34 164 Q100 182 164 158" fill="none" stroke="#FDE047" stroke-width="3.5" stroke-dasharray="4 5" stroke-linecap="round" />
+
+        <!-- Interactive Glowing Star Topper (Click to toggle Music Box!) -->
+        <g class="tree-star-topper" id="tree-star-topper" role="button" tabindex="0">
+          <title>แตะดาวบนยอดต้นคริสต์มาสเพื่อเปิด/ปิดเพลงกล่องดนตรี!</title>
+          <polygon points="100,4 107,18 122,20 111,30 114,45 100,37 86,45 89,30 78,20 93,18" fill="#FDE047" stroke="#D97706" stroke-width="2" />
+          <circle cx="100" cy="26" r="5" fill="#FFFFFF" opacity="0.85" />
+        </g>
+      </svg>
+
+      <!-- Dynamic Friend Ornaments Hang Here as Players Are Added -->
+      <div class="tree-ornaments-layer" id="tree-ornaments-layer"></div>
+
+      <!-- Snowdrift Floor inside Globe -->
+      <div class="globe-inner-snowfloor" aria-hidden="true"></div>
+    </div>
+
+    <!-- Collector's Wooden Base & Brass Wind-Up Music Key -->
+    <div class="snow-globe-base">
+      <div class="brass-plaque" id="brass-plaque-status" title="แตะเพื่อเขย่าลูกแก้วหิมะ!">
+        🎄 ต้นคริสต์มาสมีชีวิต (เขย่าลูกแก้วได้!)
+      </div>
+      <button type="button" class="brass-windup-key" id="brass-windup-key" title="ไขลานเปิด/ปิดเสียงเพลงกล่องดนตรีคริสต์มาส" aria-label="ไขลานกล่องดนตรี">
+        🗝️
+      </button>
+    </div>
+
+    <p class="globe-magic-guide">
+      ✨ แตะ <strong>ดาว/กุญแจไขลาน</strong> เปิดเพลง • แตะ <strong>พระจันทร์</strong> เรียกซานต้าปล่อยของขวัญร่มชูชีพ • แตะ <strong>ลูกแก้ว</strong> เขย่าหิมะ!
+    </p>
+  </section>
+
+  <!-- Santa's Magic Sack Shuffle Modal (Shown when Admin clicks Draw) -->
+  <div class="santa-shuffle-modal hidden" id="santa-shuffle-modal" role="dialog" aria-modal="true" aria-label="กำลังสุ่มจับฉลาก">
+    <div class="santa-sack-stage">
+      <div class="santa-sack-icon">🎅🎒</div>
+      <div class="whirling-name-pill" id="whirling-name-pill">🎁 กำลังเขย่าชื่อ...</div>
+    </div>
+    <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 6px; color: #ffd166;">
+      ✨ ถุงวิเศษซานต้ากำลังสลับชื่อเพื่อน! ✨
+    </h2>
+    <p style="font-size: 0.92rem; color: #d7f2e3;">รับประกันไม่ซ้ำกัน และไม่มีใครได้ชื่อตัวเองแน่นอน 🔔</p>
+  </div>
+
+  <main class="app-shell" id="main-content">
+    <!-- Holly Garland & Golden Bells on Top of Postcard -->
+    <div class="card-rooftop-decor">
+      <svg class="holly-bell-emblem" id="holly-bell-trigger" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="button" tabindex="0" aria-label="แตะกระดิ่งคริสต์มาสเพื่อสั่นกระดิ่ง">
+        <!-- Holly Leaves -->
+        <path d="M60 22 C42 6, 18 14, 14 30 C26 32, 34 42, 46 36 Z" fill="#1E6B41" stroke="#0F3D23" stroke-width="2.5" />
+        <path d="M60 22 C78 6, 102 14, 106 30 C94 32, 86 42, 74 36 Z" fill="#1E6B41" stroke="#0F3D23" stroke-width="2.5" />
+        <!-- Twin Golden Bells -->
+        <path d="M46 28 C34 30, 28 48, 24 58 L56 62 C54 48, 52 32, 46 28 Z" fill="#F5B83D" stroke="#A66E08" stroke-width="2.5" />
+        <path d="M74 28 C86 30, 92 48, 96 58 L64 62 C66 48, 68 32, 74 28 Z" fill="#FFD166" stroke="#A66E08" stroke-width="2.5" />
+        <circle cx="39" cy="62" r="5" fill="#D97706" />
+        <circle cx="81" cy="62" r="5" fill="#D97706" />
+        <!-- Red Holly Berries -->
+        <circle cx="60" cy="26" r="7" fill="#D93438" stroke="#8F181B" stroke-width="2" />
+        <circle cx="52" cy="20" r="6" fill="#EF4444" stroke="#8F181B" stroke-width="2" />
+        <circle cx="68" cy="20" r="6" fill="#EF4444" stroke="#8F181B" stroke-width="2" />
+      </svg>
+    </div>
+
+    <!-- Corner Stocking & Candy Cane Props -->
+    <div class="corner-prop left" id="prop-stocking" title="แตะถุงเท้าซานต้า!">🧦</div>
+    <div class="corner-prop right" id="prop-candycane" title="แตะลูกกวาดคริสต์มาส!">🍬</div>
+
+    <div class="postcard">
+      <div class="candy-stripe" aria-hidden="true"></div>
+
+      <div class="card-inner">
+        <!-- Common Festive Header -->
+        <header class="hero-header">
+          <div class="santa-badge">🎅 Secret Santa Wonderland 🎄</div>
+          <h1 class="hero-title" id="display-title">สุ่มชื่อซื้อของขวัญให้เพื่อน</h1>
+          <p class="hero-subtitle" id="display-subtitle">แตะหน้าจอเพื่อโปรยหิมะ เปิดเพลงกล่องดนตรี แล้วมาลุ้นของขวัญกัน!</p>
+        </header>
+
+        <!-- Real-Time Christmas Countdown to 19 Dec 2569 (2026) -->
+        <section class="countdown-banner" aria-label="นับถอยหลังสู่วันแลกของขวัญ">
+          <div class="countdown-label">
+            <span>🔔 นับถอยหลังสู่วันนัดแลกของขวัญ (19 ธ.ค. 2569)</span>
+          </div>
+          <div class="countdown-grid">
+            <div class="cd-box">
+              <span class="cd-num" id="cd-days">00</span>
+              <span class="cd-unit">วัน</span>
+            </div>
+            <div class="cd-box">
+              <span class="cd-num" id="cd-hours">00</span>
+              <span class="cd-unit">ชั่วโมง</span>
+            </div>
+            <div class="cd-box">
+              <span class="cd-num" id="cd-mins">00</span>
+              <span class="cd-unit">นาที</span>
+            </div>
+            <div class="cd-box">
+              <span class="cd-num" id="cd-secs">00</span>
+              <span class="cd-unit">วินาที</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Event Details (Budget & Date) -->
+        <section class="event-pills" aria-label="รายละเอียดงานแลกของขวัญ">
+          <button type="button" class="edit-event-toggle" id="btn-toggle-settings" title="แก้ไขงบประมาณและวันนัดหมาย">
+            ✏️ แก้ไขข้อมูล
+          </button>
+
+          <div class="event-pill-row">
+            <div class="event-icon budget" aria-hidden="true">💰</div>
+            <div class="event-pill-text">
+              <span class="event-pill-label">งบประมาณของขวัญ</span>
+              <span class="event-pill-value" id="display-budget">งบ 500 บาท</span>
+            </div>
+          </div>
+
+          <div class="event-pill-row">
+            <div class="event-icon date" aria-hidden="true">📅</div>
+            <div class="event-pill-text">
+              <span class="event-pill-label">วันนัดกินข้าวและแลกของขวัญ</span>
+              <span class="event-pill-value" id="display-date">นัดกินข้าวและแลกของขวัญวันที่ 19 ธันวาคม 2569</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Editable Event Settings (Admin Only) -->
+        <section class="event-settings-panel" id="event-settings-panel" aria-label="ตั้งค่ารายละเอียดงาน">
+          <div class="form-group">
+            <label for="input-event-title">🎄 หัวข้องาน</label>
+            <input type="text" id="input-event-title" class="input-field" value="สุ่มชื่อซื้อของขวัญให้เพื่อน" />
+          </div>
+          <div class="form-group">
+            <label for="input-event-budget">💰 งบประมาณ</label>
+            <input type="text" id="input-event-budget" class="input-field" value="งบ 500 บาท" />
+          </div>
+          <div class="form-group">
+            <label for="input-event-date">📅 วันและเวลานัดหมาย</label>
+            <input type="text" id="input-event-date" class="input-field" value="นัดกินข้าวและแลกของขวัญวันที่ 19 ธันวาคม 2569" />
+          </div>
+          <button type="button" class="btn btn-add" id="btn-save-settings" style="width: 100%; padding: 10px;">
+            💾 บันทึกรายละเอียดงาน
+          </button>
+        </section>
+
+        <!-- ==========================================
+             VIEW 1: ADMIN MANAGEMENT VIEW
+             ========================================== -->
+        <div id="admin-view">
+          <section aria-labelledby="players-heading">
+            <div class="section-header">
+              <h2 class="section-title" id="players-heading">
+                🦌 รายชื่อเพื่อนที่ร่วมเล่น
+                <span class="count-badge" id="player-count-badge">0 คน</span>
+              </h2>
+              <button type="button" class="text-btn-clear hidden" id="btn-clear-all">
+                🗑️ ล้างรายชื่อทั้งหมด
+              </button>
+            </div>
+
+            <form id="add-player-form" class="add-player-box" autocomplete="off">
+              <input
+                type="text"
+                id="player-name-input"
+                class="input-field"
+                placeholder="พิมพ์ชื่อเพื่อน (เช่น มิว, แมน, พลอย)..."
+                aria-label="ชื่อเพื่อน"
+              />
+              <button type="submit" class="btn btn-add">
+                ➕ เพิ่มชื่อ
+              </button>
+            </form>
+            <p class="helper-hint">💡 พิมพ์ทีละชื่อแล้วกด Enter หรือวางหลายชื่อพร้อมกันโดยคั่นด้วยลูกน้ำ (,) ได้เลย</p>
+
+            <!-- Player Ornament Tags Container -->
+            <div class="player-tags-wrap" id="player-tags-list" aria-live="polite">
+              <p class="empty-players-msg">🎄 ยังไม่มีรายชื่อเพื่อน เพิ่มชื่ออย่างน้อย 2 คนเพื่อเริ่มสุ่มจับฉลาก 🎄</p>
+            </div>
+
+            <!-- Draw Action Button -->
+            <button type="button" class="btn btn-draw-main" id="btn-draw-random" disabled>
+              🎲 เพิ่มชื่อเพื่อนอย่างน้อย 2 คนเพื่อสุ่ม
+            </button>
+          </section>
+
+          <!-- Step 2: Generated Secret Links for Each Friend -->
+          <section id="links-result-section" class="links-section hidden" aria-labelledby="share-links-heading">
+            <div class="section-header">
+              <h2 class="section-title" id="share-links-heading">
+                💌 ส่งลิงก์ของขวัญให้เพื่อนทาง LINE
+              </h2>
+              <span style="font-size: 0.78rem; color: var(--text-muted);" id="round-time-label"></span>
+            </div>
+
+            <div class="privacy-shield-banner">
+              <span style="font-size: 1.25rem;">🤫</span>
+              <div>
+                <strong>ซ่อนผลลัพธ์เป็นความลับ 100%!</strong><br />
+                ไม่มีใครเห็นชื่อคู่ของคนอื่นบนหน้านี้ แอดมินสามารถส่งลิงก์ให้เพื่อนทีละคน และกดเปิดลิงก์ชื่อตัวเองเพื่อร่วมลุ้นได้เหมือนทุกคนเลย!
+              </div>
+            </div>
+
+            <div class="links-list" id="generated-links-list"></div>
+
+            <button type="button" class="btn btn-copy-all" id="btn-copy-all-links">
+              📢 คัดลอกลิงก์รวมทุกคน (สำหรับวางในกลุ่ม LINE เดียว)
+            </button>
+
+            <div id="local-file-warning" class="local-file-notice hidden">
+              ⚠️ <strong>หมายเหตุ:</strong> ตอนนี้คุณกำลังเปิดไฟล์จากในเครื่องคอมพิวเตอร์โดยตรง (<code>file://</code>) เมื่อนำไฟล์นี้ไปอัปโหลดขึ้น <strong>GitHub Pages</strong> แล้ว ลิงก์ที่ส่งให้เพื่อนจะเปิดผ่าน LINE บนมือถือได้ทันทีครับ
+            </div>
+          </section>
+        </div>
+
+        <!-- ==========================================
+             VIEW 2: PLAYER 3-STEP GIFT UNBOX & FROST SCRATCH
+             ========================================== -->
+        <div id="player-view" class="player-reveal-container hidden">
+          <div class="recipient-greeting-box">
+            <p class="greeting-eyebrow">🎄 กล่องของขวัญความลับสำหรับ...</p>
+            <h2 class="greeting-player-name" id="reveal-giver-name">คุณ...</h2>
+            <span class="greeting-warning" id="reveal-identity-warning">
+              ⚠️ กดเปิดเฉพาะเจ้าของชื่อเท่านั้นนะ ห้ามแอบดูของเพื่อน!
+            </span>
+          </div>
+
+          <!-- Interactive 3-Step Gift Box Stage -->
+          <div id="gift-unbox-stage-wrap">
+            <div class="unbox-step-indicator" id="unbox-step-badge">
+              ⭐ ขั้นที่ 1 / 3 : แตะที่กล่องเพื่อดึงริบบิ้นสีทอง!
+            </div>
+
+            <div class="gift-stage" id="gift-box-trigger" role="button" tabindex="0" aria-label="กดแกะกล่องของขวัญทีละขั้นเพื่อดูชื่อเพื่อน">
+              <div class="gift-glow"></div>
+              <svg class="gift-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Sparkles around box -->
+                <g fill="#F5B83D">
+                  <path d="M28 52 L32 62 L42 66 L32 70 L28 80 L24 70 L14 66 L24 62 Z" />
+                  <path d="M172 44 L175 51 L182 54 L175 57 L172 64 L169 57 L162 54 L169 51 Z" />
+                  <circle cx="165" cy="118" r="4" />
+                  <circle cx="32" cy="126" r="3.5" />
+                </g>
+
+                <!-- Gift Box Base -->
+                <g class="gift-base-group">
+                  <rect x="38" y="86" width="124" height="94" rx="14" fill="#D93438" stroke="#8F181B" stroke-width="4" />
+                  <rect x="38" y="86" width="124" height="14" fill="#A81E22" opacity="0.45" />
+                  <circle cx="62" cy="116" r="5" fill="#F26B6D" opacity="0.55" />
+                  <circle cx="56" cy="154" r="6" fill="#F26B6D" opacity="0.55" />
+                  <circle cx="142" cy="122" r="5.5" fill="#F26B6D" opacity="0.55" />
+                  <circle cx="136" cy="158" r="5" fill="#F26B6D" opacity="0.55" />
+                  <rect x="88" y="86" width="24" height="94" fill="#F5B83D" stroke="#B87E0F" stroke-width="2" />
+                  <rect x="38" y="124" width="124" height="20" fill="#F5B83D" stroke="#B87E0F" stroke-width="2" />
+                </g>
+
+                <!-- Gift Box Lid & Ribbon Bow -->
+                <g class="gift-lid-group">
+                  <g class="gift-bow-group">
+                    <path d="M100 62 C72 24, 42 46, 74 66 C84 71, 94 68, 100 62 Z" fill="#F5B83D" stroke="#B87E0F" stroke-width="3.5" />
+                    <path d="M100 62 C128 24, 158 46, 126 66 C116 71, 106 68, 100 62 Z" fill="#F5B83D" stroke="#B87E0F" stroke-width="3.5" />
+                    <circle cx="100" cy="60" r="10" fill="#FFD166" stroke="#B87E0F" stroke-width="3" />
+                  </g>
+                  <rect x="28" y="62" width="144" height="28" rx="9" fill="#E6484A" stroke="#8F181B" stroke-width="4" />
+                  <rect x="86" y="62" width="28" height="28" fill="#FFD166" stroke="#B87E0F" stroke-width="2" />
+                </g>
+              </svg>
+            </div>
+
+            <button type="button" class="btn btn-draw-main" id="btn-open-gift">
+              🎀 แตะครั้งที่ 1: ดึงปมริบบิ้นสีทอง!
+            </button>
+          </div>
+
+          <!-- Revealed Target Card with Interactive Frost Scratch Layer -->
+          <div class="reveal-result-card" id="reveal-result-card" aria-live="polite">
+            <p class="reveal-eyebrow">🎉 คนที่คุณต้องเตรียมของขวัญให้คือ...</p>
+
+            <div class="target-name-frame" id="target-name-frame">
+              <div class="target-name-text" id="reveal-receiver-name">...</div>
+              <canvas id="frost-scratch-canvas" title="ใช้นิ้วหรือเมาส์ถูขูดหิมะออก!"></canvas>
+            </div>
+
+            <div class="scratch-helper-bar" id="scratch-helper-bar">
+              <button type="button" class="btn btn-clear-frost" id="btn-clear-frost">
+                ✨ กดปัดหิมะออกทันที (หรือใช้นิ้วถูขูดหิมะด้านบน)
+              </button>
+            </div>
+
+            <p class="secret-whisper">
+              🤫 เก็บไว้เป็นความลับนะ! อย่าเพิ่งหลุดบอกเพื่อนจนกว่าจะถึงวันแลกของขวัญ
+            </p>
+
+            <button type="button" class="btn btn-peek-toggle" id="btn-toggle-blur">
+              🙈 กดซ่อนชื่อชั่วคราว (กันคนข้างๆ แอบมอง)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="candy-stripe" aria-hidden="true" style="border-top: 2px solid var(--card-border); border-bottom: none;"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p id="footer-admin-switch" class="hidden">
+      ต้องการจัดตั้งวงจับฉลากใหม่ใช่ไหม? <a id="link-go-admin" href="?">กลับไปหน้าจัดการรายชื่อ (สำหรับแอดมิน)</a>
+    </p>
+    <p style="margin-top: 4px;">🎄 แตะต้นคริสต์มาสหรือตุ๊กตาหิมะด้านล่างเพื่อเล่นเอฟเฟกต์คริสต์มาสได้นะ! ⛄🎁</p>
+  </footer>
+
+  <!-- Interactive Winter Wonderland Village Foreground -->
+  <div class="winter-village-scene" aria-label="ฉากหมู่บ้านหิมะคริสต์มาส">
+    <div class="snow-hill-back"></div>
+    <div class="snow-hill-front"></div>
+
+    <div class="village-props-wrap">
+      <div class="prop-group-left">
+        <div class="interactive-prop prop-tree" id="prop-tree-left" role="button" tabindex="0" aria-label="ต้นคริสต์มาส">
+          <span class="prop-tooltip" id="tooltip-tree-left">🎄 Merry X'Mas!</span>
+          🎄
+        </div>
+        <div class="interactive-prop prop-snowman" id="prop-snowman" role="button" tabindex="0" aria-label="ตุ๊กตาหิมะ">
+          <span class="prop-tooltip" id="tooltip-snowman">⛄ เย้! หิมะตกแล้ว!</span>
+          ⛄
+        </div>
+      </div>
+
+      <div class="prop-group-right">
+        <div class="interactive-prop prop-cabin" id="prop-cabin" role="button" tabindex="0" aria-label="กระท่อมคริสต์มาส">
+          <span class="prop-tooltip" id="tooltip-cabin">🏠 งบ 500 บาท 19 ธ.ค. นี้นะ!</span>
+          🏠
+        </div>
+        <div class="interactive-prop prop-tree" id="prop-tree-right" role="button" tabindex="0" aria-label="ต้นคริสต์มาส">
+          <span class="prop-tooltip" id="tooltip-tree-right">🌟 ขอให้ได้ของขวัญโดนใจ!</span>
+          🎄
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Message -->
+  <div id="toast" class="toast-container" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* =====================================================
+         1. CONSTANTS & STORAGE KEYS
+         ===================================================== */
+      const STORAGE_KEY = 'secret_santa_christmas_state_v1';
+      const DEFAULT_STATE = {
+        title: 'สุ่มชื่อซื้อของขวัญให้เพื่อน',
+        budget: 'งบ 500 บาท',
+        date: 'นัดกินข้าวและแลกของขวัญวันที่ 19 ธันวาคม 2569',
+        players: [],
+        pairings: [],
+        roundTime: null
+      };
+
+      const SANTA_BLESSINGS = [
+        'Ho Ho Ho! ขอให้ได้ของขวัญสุดพิเศษถูกใจนะ! 🎅🎁',
+        '🎄 คริสต์มาสปีนี้ ขอให้แก๊งเพื่อนมีความสุขมากๆ เลย!',
+        '🦌 กวางเรนเดียร์กระซิบว่า ของขวัญงบ 500 ปีนี้เด็ดมาก!',
+        '✨ 19 ธันวาคม 2569 เจอกัน! เตรียมของขวัญมาให้พร้อมนะ!',
+        '🔔 จิงเกิลเบลล์~ ขอให้สมหวังและอิ่มอร่อยในวันนัดกินข้าว!'
+      ];
+
+      /* =====================================================
+         2. WEB AUDIO SYNTHESIZER (CHRISTMAS MUSIC BOX & SFX)
+            100% Self-Contained — Works Offline & on GitHub Pages
+         ===================================================== */
+      let audioCtx = null;
+      let isMusicPlaying = false;
+      let musicTimeoutId = null;
+      let melodyIndex = 0;
+
+      // Jingle Bells + We Wish You a Merry Christmas Music Box Melody (freq in Hz, beats)
+      const XMAS_MELODY = [
+        // Jingle Bells: E5 E5 E5 - E5 E5 E5 - E5 G5 C5 D5 E5
+        [659.25, 0.28], [659.25, 0.28], [659.25, 0.56],
+        [659.25, 0.28], [659.25, 0.28], [659.25, 0.56],
+        [659.25, 0.28], [783.99, 0.28], [523.25, 0.42], [587.33, 0.16], [659.25, 0.85],
+        // F5 F5 F5 F5 - F5 E5 E5 E5 E5 - E5 D5 D5 E5 D5 G5
+        [698.46, 0.28], [698.46, 0.28], [698.46, 0.42], [698.46, 0.16],
+        [698.46, 0.28], [659.25, 0.28], [659.25, 0.28], [659.25, 0.14], [659.25, 0.14],
+        [659.25, 0.28], [587.33, 0.28], [587.33, 0.28], [659.25, 0.28], [587.33, 0.52], [783.99, 0.52],
+        // Repeat Hook: E5 E5 E5 - E5 E5 E5 - E5 G5 C5 D5 E5
+        [659.25, 0.28], [659.25, 0.28], [659.25, 0.56],
+        [659.25, 0.28], [659.25, 0.28], [659.25, 0.56],
+        [659.25, 0.28], [783.99, 0.28], [523.25, 0.42], [587.33, 0.16], [659.25, 0.85],
+        // Finale: F5 F5 F5 F5 - F5 E5 E5 E5 - G5 G5 F5 D5 C5
+        [698.46, 0.28], [698.46, 0.28], [698.46, 0.42], [698.46, 0.16],
+        [698.46, 0.28], [659.25, 0.28], [659.25, 0.28], [659.25, 0.28],
+        [783.99, 0.28], [783.99, 0.28], [698.46, 0.28], [587.33, 0.28], [523.25, 0.95]
+      ];
+
+      function ensureAudioContext() {
+        if (!audioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) {
+            audioCtx = new AudioContextClass();
+          }
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        return audioCtx;
+      }
+
+      // Play a single celesta / music-box bell note
+      function playBellNote(freq, durationSec, volume) {
+        const ctx = ensureAudioContext();
+        if (!ctx) return;
+
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const overtone = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+
+        overtone.type = 'triangle';
+        overtone.frequency.setValueAtTime(freq * 2, now);
+
+        const peak = volume || 0.11;
+        gain.gain.setValueAtTime(0.001, now);
+        gain.gain.exponentialRampToValueAtTime(peak, now + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0008, now + (durationSec || 0.45));
+
+        osc.connect(gain);
+        overtone.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        overtone.start(now);
+        osc.stop(now + (durationSec || 0.45) + 0.04);
+        overtone.stop(now + (durationSec || 0.45) + 0.04);
+      }
+
+      // Play a joyful Christmas Sleigh Bell / Chime Chord
+      function playSleighChime(type) {
+        const ctx = ensureAudioContext();
+        if (!ctx) return;
+
+        if (type === 'fanfare') {
+          const notes = [523.25, 659.25, 783.99, 1046.5];
+          notes.forEach(function (n, idx) {
+            setTimeout(function () {
+              playBellNote(n, 0.65, 0.14);
+            }, idx * 90);
+          });
+        } else if (type === 'unboxStep') {
+          playBellNote(659.25, 0.3, 0.12);
+          setTimeout(function () { playBellNote(880, 0.4, 0.13); }, 80);
+        } else {
+          // Gentle sparkle chime
+          const sparkleNotes = [783.99, 987.77, 1046.5, 1174.66, 1318.5];
+          const pick = sparkleNotes[Math.floor(Math.random() * sparkleNotes.length)];
+          playBellNote(pick, 0.35, 0.08);
+        }
+      }
+
+      function scheduleNextMusicNote() {
+        if (!isMusicPlaying) return;
+        const noteItem = XMAS_MELODY[melodyIndex];
+        const freq = noteItem[0];
+        const dur = noteItem[1];
+
+        playBellNote(freq, dur * 1.4, 0.085);
+        // Subtle bass harmony on first beat
+        if (melodyIndex % 4 === 0) {
+          playBellNote(freq * 0.5, dur * 1.6, 0.035);
+        }
+
+        melodyIndex = (melodyIndex + 1) % XMAS_MELODY.length;
+        musicTimeoutId = setTimeout(scheduleNextMusicNote, dur * 1000);
+      }
+
+      function toggleMusicBox() {
+        ensureAudioContext();
+        isMusicPlaying = !isMusicPlaying;
+        document.body.classList.toggle('music-playing', isMusicPlaying);
+        const elPlaque = document.getElementById('brass-plaque-status');
+        if (isMusicPlaying) {
+          if (elPlaque) elPlaque.textContent = '🎶 กล่องดนตรี Jingle Bells กำลังบรรเลง...';
+          scheduleNextMusicNote();
+          showToast('🎶 ไขลานเปิดกล่องดนตรี Jingle Bells แล้ว!');
+        } else {
+          if (elPlaque) elPlaque.textContent = '🎄 ต้นคริสต์มาสมีชีวิต (เขย่าลูกแก้วได้!)';
+          if (musicTimeoutId) clearTimeout(musicTimeoutId);
+          showToast('🔇 พักเสียงเพลงกล่องดนตรีชั่วคราว');
+        }
+      }
+
+      const elStarTopper = document.getElementById('tree-star-topper');
+      const elWindupKey = document.getElementById('brass-windup-key');
+      if (elStarTopper) elStarTopper.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMusicBox();
+      });
+      if (elWindupKey) elWindupKey.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMusicBox();
+      });
+
+      /* =====================================================
+         3. STATELESS URL TOKEN ENCODER / DECODER
+         ===================================================== */
+      function encodeSecretToken(payloadObj) {
+        const jsonString = JSON.stringify(payloadObj);
+        const utf8Bytes = new TextEncoder().encode(jsonString);
+
+        const saltA = Math.floor(Math.random() * 251) + 1;
+        const saltB = Math.floor(Math.random() * 251) + 1;
+
+        const outBytes = new Uint8Array(utf8Bytes.length + 2);
+        outBytes[0] = saltA;
+        outBytes[1] = saltB;
+
+        for (let i = 0; i < utf8Bytes.length; i++) {
+          const mask = (saltA + i * 31) ^ (saltB + (i & 7) * 17);
+          outBytes[i + 2] = utf8Bytes[i] ^ (mask & 0xff);
+        }
+
+        let binary = '';
+        for (let i = 0; i < outBytes.length; i++) {
+          binary += String.fromCharCode(outBytes[i]);
+        }
+
+        return btoa(binary)
+          .replace(/\+/g, '-')
+          .replace(/\//g, '_')
+          .replace(/=+$/, '');
+      }
+
+      function decodeSecretToken(tokenStr) {
+        try {
+          let base64 = tokenStr.replace(/-/g, '+').replace(/_/g, '/');
+          while (base64.length % 4 !== 0) {
+            base64 += '=';
+          }
+          const binary = atob(base64);
+          if (binary.length < 3) return null;
+
+          const saltA = binary.charCodeAt(0);
+          const saltB = binary.charCodeAt(1);
+          const dataBytes = new Uint8Array(binary.length - 2);
+
+          for (let i = 0; i < dataBytes.length; i++) {
+            const mask = (saltA + i * 31) ^ (saltB + (i & 7) * 17);
+            dataBytes[i] = binary.charCodeAt(i + 2) ^ (mask & 0xff);
+          }
+
+          const jsonString = new TextDecoder().decode(dataBytes);
+          return JSON.parse(jsonString);
+        } catch (err) {
+          return null;
+        }
+      }
+
+      /* =====================================================
+         4. DERANGEMENT PAIRING ENGINE
+         ===================================================== */
+      function createRandomCyclePairings(playerNames, eventMeta) {
+        const list = playerNames.slice();
+
+        for (let i = list.length - 1; i > 0; i--) {
+          let randIndex;
+          if (window.crypto && window.crypto.getRandomValues) {
+            const randBuf = new Uint32Array(1);
+            window.crypto.getRandomValues(randBuf);
+            randIndex = randBuf[0] % (i + 1);
+          } else {
+            randIndex = Math.floor(Math.random() * (i + 1));
+          }
+          const temp = list[i];
+          list[i] = list[randIndex];
+          list[randIndex] = temp;
+        }
+
+        const tokenMap = {};
+        for (let i = 0; i < list.length; i++) {
+          const giver = list[i];
+          const receiver = list[(i + 1) % list.length];
+          const token = encodeSecretToken({
+            g: giver,
+            r: receiver,
+            t: eventMeta.title,
+            b: eventMeta.budget,
+            d: eventMeta.date
+          });
+          tokenMap[giver] = token;
+        }
+
+        return playerNames.map(function (name) {
+          return {
+            giver: name,
+            token: tokenMap[name],
+            sent: false
+          };
+        });
+      }
+
+      /* =====================================================
+         5. REAL-TIME COUNTDOWN TO 19 DEC 2569 (2026)
+         ===================================================== */
+      const elCdDays = document.getElementById('cd-days');
+      const elCdHours = document.getElementById('cd-hours');
+      const elCdMins = document.getElementById('cd-mins');
+      const elCdSecs = document.getElementById('cd-secs');
+
+      function updateChristmasCountdown() {
+        // 19 December 2569 BE = 19 December 2026 CE
+        const targetDate = new Date('2026-12-19T18:00:00+07:00').getTime();
+        const now = Date.now();
+        const diff = Math.max(0, targetDate - now);
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / 1000 / 60) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+
+        elCdDays.textContent = String(days).padStart(2, '0');
+        elCdHours.textContent = String(hours).padStart(2, '0');
+        elCdMins.textContent = String(mins).padStart(2, '0');
+        elCdSecs.textContent = String(secs).padStart(2, '0');
+      }
+      updateChristmasCountdown();
+      setInterval(updateChristmasCountdown, 1000);
+
+      /* =====================================================
+         6. DOM ELEMENTS & STATE MANAGEMENT
+         ===================================================== */
+      const elDisplayTitle = document.getElementById('display-title');
+      const elDisplayBudget = document.getElementById('display-budget');
+      const elDisplayDate = document.getElementById('display-date');
+
+      const btnToggleSettings = document.getElementById('btn-toggle-settings');
+      const elSettingsPanel = document.getElementById('event-settings-panel');
+      const inputTitle = document.getElementById('input-event-title');
+      const inputBudget = document.getElementById('input-event-budget');
+      const inputDate = document.getElementById('input-event-date');
+      const btnSaveSettings = document.getElementById('btn-save-settings');
+
+      const elAdminView = document.getElementById('admin-view');
+      const elPlayerView = document.getElementById('player-view');
+      const elFooterAdminSwitch = document.getElementById('footer-admin-switch');
+      const elLinkGoAdmin = document.getElementById('link-go-admin');
+
+      const formAddPlayer = document.getElementById('add-player-form');
+      const inputPlayerName = document.getElementById('player-name-input');
+      const elPlayerCountBadge = document.getElementById('player-count-badge');
+      const elPlayerTagsList = document.getElementById('player-tags-list');
+      const btnClearAll = document.getElementById('btn-clear-all');
+      const btnDrawRandom = document.getElementById('btn-draw-random');
+
+      const elSantaShuffleModal = document.getElementById('santa-shuffle-modal');
+      const elWhirlingNamePill = document.getElementById('whirling-name-pill');
+
+      const elLinksResultSection = document.getElementById('links-result-section');
+      const elGeneratedLinksList = document.getElementById('generated-links-list');
+      const elRoundTimeLabel = document.getElementById('round-time-label');
+      const btnCopyAllLinks = document.getElementById('btn-copy-all-links');
+      const elLocalFileWarning = document.getElementById('local-file-warning');
+
+      // Player View Elements
+      const elRevealGiverName = document.getElementById('reveal-giver-name');
+      const elRevealIdentityWarning = document.getElementById('reveal-identity-warning');
+      const elGiftStageWrap = document.getElementById('gift-unbox-stage-wrap');
+      const elUnboxStepBadge = document.getElementById('unbox-step-badge');
+      const elGiftBoxTrigger = document.getElementById('gift-box-trigger');
+      const btnOpenGift = document.getElementById('btn-open-gift');
+      const elRevealResultCard = document.getElementById('reveal-result-card');
+      const elTargetNameFrame = document.getElementById('target-name-frame');
+      const elRevealReceiverName = document.getElementById('reveal-receiver-name');
+      const elFrostCanvas = document.getElementById('frost-scratch-canvas');
+      const elScratchHelperBar = document.getElementById('scratch-helper-bar');
+      const btnClearFrost = document.getElementById('btn-clear-frost');
+      const btnToggleBlur = document.getElementById('btn-toggle-blur');
+
+      const elToast = document.getElementById('toast');
+      let toastTimer = null;
+
+      function showToast(message) {
+        elToast.textContent = message;
+        elToast.classList.add('show');
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          elToast.classList.remove('show');
+        }, 3200);
+      }
+
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return Object.assign({}, DEFAULT_STATE, { players: [], pairings: [] });
+          const parsed = JSON.parse(raw);
+          return {
+            title: parsed.title || DEFAULT_STATE.title,
+            budget: parsed.budget || DEFAULT_STATE.budget,
+            date: parsed.date || DEFAULT_STATE.date,
+            players: Array.isArray(parsed.players) ? parsed.players : [],
+            pairings: Array.isArray(parsed.pairings) ? parsed.pairings : [],
+            roundTime: parsed.roundTime || null
+          };
+        } catch (e) {
+          return Object.assign({}, DEFAULT_STATE, { players: [], pairings: [] });
+        }
+      }
+
+      function saveState() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } catch (e) {}
+      }
+
+      let state = loadState();
+
+      function getBasePageUrl() {
+        return window.location.href.split('?')[0].split('#')[0];
+      }
+
+      function buildPlayerLink(token) {
+        return getBasePageUrl() + '?gift=' + encodeURIComponent(token);
+      }
+
+      function buildShareMessageForFriend(giverName, linkUrl) {
+        return (
+          '🎄 ลิงก์จับฉลากของขวัญคริสต์มาสของ "' + giverName + '" มาแล้ว! 🎁\n' +
+          '💰 ' + state.budget + '\n' +
+          '📅 ' + state.date + '\n\n' +
+          '👉 กดเข้าไปแกะกล่องของขวัญดูชื่อเพื่อนได้ที่นี่เลย:\n' +
+          linkUrl
+        );
+      }
+
+      function copyTextToClipboard(text, onSuccessMessage) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () {
+            showToast(onSuccessMessage);
+          }).catch(function () {
+            fallbackCopyText(text, onSuccessMessage);
+          });
+        } else {
+          fallbackCopyText(text, onSuccessMessage);
+        }
+      }
+
+      function fallbackCopyText(text, onSuccessMessage) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          showToast(onSuccessMessage);
+        } catch (err) {
+          showToast('ไม่สามารถคัดลอกอัตโนมัติได้ กรุณาคัดลอกจากแถบที่อยู่เว็บ');
+        }
+        document.body.removeChild(textarea);
+      }
+
+      /* =====================================================
+         7. RENDER ADMIN UI
+         ===================================================== */
+      function renderEventHeader(meta) {
+        elDisplayTitle.textContent = meta.title || DEFAULT_STATE.title;
+        elDisplayBudget.textContent = meta.budget || DEFAULT_STATE.budget;
+        elDisplayDate.textContent = meta.date || DEFAULT_STATE.date;
+
+        inputTitle.value = meta.title || DEFAULT_STATE.title;
+        inputBudget.value = meta.budget || DEFAULT_STATE.budget;
+        inputDate.value = meta.date || DEFAULT_STATE.date;
+      }
+
+      const ORNAMENT_CLASSES = ['ornament-red', 'ornament-green', 'ornament-gold'];
+      const TREE_BAUBLE_COLORS = ['#EF4444', '#F59E0B', '#10B981', '#38BDF8', '#EC4899', '#A855F7'];
+      // Pre-mapped branch coordinates (%) inside the 248x228 snow globe dome
+      const TREE_BRANCH_SLOTS = [
+        { left: 50, top: 38 },
+        { left: 41, top: 49 }, { left: 59, top: 49 },
+        { left: 35, top: 61 }, { left: 50, top: 59 }, { left: 65, top: 61 },
+        { left: 29, top: 73 }, { left: 43, top: 72 }, { left: 57, top: 72 }, { left: 71, top: 73 },
+        { left: 37, top: 44 }, { left: 63, top: 44 },
+        { left: 33, top: 67 }, { left: 50, top: 68 }, { left: 67, top: 67 }
+      ];
+
+      function renderLivingTreeOrnaments(namesList) {
+        const layer = document.getElementById('tree-ornaments-layer');
+        const elPlaque = document.getElementById('brass-plaque-status');
+        if (!layer) return;
+        layer.innerHTML = '';
+
+        const list = Array.isArray(namesList) ? namesList : [];
+        if (elPlaque && !isMusicPlaying) {
+          elPlaque.textContent = list.length > 0
+            ? '🎄 ต้นคริสต์มาสมีลูกบอลเพื่อน ' + list.length + ' คน!'
+            : '🎄 ต้นคริสต์มาสมีชีวิต (เขย่าลูกแก้วได้!)';
+        }
+
+        list.forEach(function (friendName, idx) {
+          const slot = TREE_BRANCH_SLOTS[idx % TREE_BRANCH_SLOTS.length];
+          const jitterX = idx >= TREE_BRANCH_SLOTS.length ? ((idx % 3) - 1) * 5 : 0;
+          const jitterY = idx >= TREE_BRANCH_SLOTS.length ? -4 : 0;
+
+          const bauble = document.createElement('div');
+          bauble.className = 'tree-bauble';
+          bauble.style.left = (slot.left + jitterX) + '%';
+          bauble.style.top = (slot.top + jitterY) + '%';
+          bauble.style.background = TREE_BAUBLE_COLORS[idx % TREE_BAUBLE_COLORS.length];
+          bauble.textContent = friendName.trim().charAt(0).toUpperCase();
+          bauble.title = 'ลูกบอลของ ' + friendName + ' (แตะเพื่อสั่นกระดิ่ง!)';
+
+          bauble.addEventListener('click', function (e) {
+            e.stopPropagation();
+            playSleighChime('sparkle');
+            spawnTouchSparkles(e.clientX || window.innerWidth / 2, e.clientY || 160, 10);
+            showToast('🎄 ลูกบอลประดับต้นไม้ของ "' + friendName + '" ✨');
+          });
+
+          layer.appendChild(bauble);
+        });
+      }
+
+      function renderAdminView() {
+        renderEventHeader(state);
+        renderLivingTreeOrnaments(state.players);
+
+        const count = state.players.length;
+        elPlayerCountBadge.textContent = count + ' คน';
+
+        if (count > 0) {
+          btnClearAll.classList.remove('hidden');
+        } else {
+          btnClearAll.classList.add('hidden');
+        }
+
+        elPlayerTagsList.innerHTML = '';
+        if (count === 0) {
+          const emptyMsg = document.createElement('p');
+          emptyMsg.className = 'empty-players-msg';
+          emptyMsg.textContent = '🎄 ยังไม่มีรายชื่อเพื่อน เพิ่มชื่ออย่างน้อย 2 คนเพื่อเริ่มสุ่มจับฉลาก 🎄';
+          elPlayerTagsList.appendChild(emptyMsg);
+        } else {
+          state.players.forEach(function (name, idx) {
+            const tag = document.createElement('div');
+            tag.className = 'player-tag';
+
+            const numSpan = document.createElement('span');
+            numSpan.className = 'player-num ' + ORNAMENT_CLASSES[idx % ORNAMENT_CLASSES.length];
+            numSpan.textContent = String(idx + 1);
+
+            const nameSpan = document.createElement('span');
+            nameSpan.textContent = name;
+
+            tag.addEventListener('click', function (e) {
+              if (e.target.tagName.toLowerCase() === 'button') return;
+              playSleighChime('sparkle');
+              spawnTouchSparkles(e.clientX || window.innerWidth / 2, e.clientY || 260, 8);
+            });
+
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'player-remove-btn';
+            removeBtn.setAttribute('aria-label', 'ลบรายชื่อ ' + name);
+            removeBtn.title = 'ลบชื่อ ' + name;
+            removeBtn.textContent = '×';
+            removeBtn.addEventListener('click', function () {
+              removePlayerAt(idx);
+            });
+
+            tag.appendChild(numSpan);
+            tag.appendChild(nameSpan);
+            tag.appendChild(removeBtn);
+            elPlayerTagsList.appendChild(tag);
+          });
+        }
+
+        if (count < 2) {
+          btnDrawRandom.disabled = true;
+          btnDrawRandom.textContent = '🎲 เพิ่มชื่อเพื่อนอย่างน้อย 2 คนเพื่อสุ่ม (' + count + '/2)';
+        } else {
+          btnDrawRandom.disabled = false;
+          if (state.pairings && state.pairings.length === count) {
+            btnDrawRandom.textContent = '🔄 เขย่าถุงซานต้าสุ่มใหม่อีกครั้ง (' + count + ' คน)';
+          } else {
+            btnDrawRandom.textContent = '🎅 เขย่าถุงซานต้าสุ่มจับฉลาก! (' + count + ' คน)';
+          }
+        }
+
+        if (state.pairings && state.pairings.length >= 2) {
+          elLinksResultSection.classList.remove('hidden');
+          elRoundTimeLabel.textContent = state.roundTime ? 'สุ่มเมื่อ ' + state.roundTime : '';
+          elGeneratedLinksList.innerHTML = '';
+
+          state.pairings.forEach(function (item, idx) {
+            const linkUrl = buildPlayerLink(item.token);
+
+            const row = document.createElement('div');
+            row.className = 'friend-link-card' + (item.sent ? ' sent' : '');
+
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'friend-info';
+
+            const avatar = document.createElement('div');
+            avatar.className = 'friend-avatar';
+            avatar.textContent = item.giver.charAt(0).toUpperCase();
+
+            const nameWrap = document.createElement('div');
+            nameWrap.className = 'friend-name-wrap';
+
+            const nameEl = document.createElement('div');
+            nameEl.className = 'friend-name';
+            nameEl.textContent = (idx + 1) + '. ' + item.giver;
+
+            const statusEl = document.createElement('span');
+            statusEl.className = 'sent-status';
+            statusEl.textContent = item.sent ? '✅ ส่ง/คัดลอกลิงก์แล้ว' : '⏳ รอส่งลิงก์ให้เพื่อน';
+
+            nameWrap.appendChild(nameEl);
+            nameWrap.appendChild(statusEl);
+            infoDiv.appendChild(avatar);
+            infoDiv.appendChild(nameWrap);
+
+            const actionsDiv = document.createElement('div');
+            actionsDiv.className = 'friend-actions';
+
+            const lineBtn = document.createElement('a');
+            lineBtn.className = 'btn btn-line-share';
+            const shareMsg = buildShareMessageForFriend(item.giver, linkUrl);
+            lineBtn.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(shareMsg);
+            lineBtn.target = '_blank';
+            lineBtn.rel = 'noopener noreferrer';
+            lineBtn.innerHTML = '💬 ส่ง LINE';
+            lineBtn.addEventListener('click', function () {
+              playSleighChime('sparkle');
+              state.pairings[idx].sent = true;
+              saveState();
+              renderAdminView();
+            });
+
+            const copyBtn = document.createElement('button');
+            copyBtn.type = 'button';
+            copyBtn.className = 'btn btn-copy-link';
+            copyBtn.innerHTML = item.sent ? '📋 คัดลอกซ้ำ' : '📋 คัดลอกลิงก์';
+            copyBtn.addEventListener('click', function () {
+              playSleighChime('sparkle');
+              state.pairings[idx].sent = true;
+              saveState();
+              renderAdminView();
+              copyTextToClipboard(
+                shareMsg,
+                '✅ คัดลอกลิงก์ของ "' + item.giver + '" แล้ว! นำไปวางใน LINE ได้เลย'
+              );
+            });
+
+            const openSelfBtn = document.createElement('a');
+            openSelfBtn.className = 'btn btn-open-self';
+            openSelfBtn.href = linkUrl;
+            openSelfBtn.title = 'กดเปิดเฉพาะถ้าคุณคือ ' + item.giver;
+            openSelfBtn.textContent = '🎁 เปิดดู';
+
+            actionsDiv.appendChild(lineBtn);
+            actionsDiv.appendChild(copyBtn);
+            actionsDiv.appendChild(openSelfBtn);
+
+            row.appendChild(infoDiv);
+            row.appendChild(actionsDiv);
+            elGeneratedLinksList.appendChild(row);
+          });
+
+          if (window.location.protocol === 'file:') {
+            elLocalFileWarning.classList.remove('hidden');
+          } else {
+            elLocalFileWarning.classList.add('hidden');
+          }
+        } else {
+          elLinksResultSection.classList.add('hidden');
+        }
+      }
+
+      /* =====================================================
+         8. ADMIN ACTIONS & SANTA'S SACK SHUFFLE SHOW
+         ===================================================== */
+      function addPlayersFromInput(rawInput) {
+        if (!rawInput || !rawInput.trim()) return;
+
+        const parts = rawInput
+          .split(/[\n,]+/)
+          .map(function (s) { return s.trim(); })
+          .filter(Boolean);
+
+        if (parts.length === 0) return;
+
+        let addedCount = 0;
+        let duplicateNames = [];
+
+        parts.forEach(function (candidate) {
+          const exists = state.players.some(function (existing) {
+            return existing.toLowerCase() === candidate.toLowerCase();
+          });
+          if (exists) {
+            duplicateNames.push(candidate);
+          } else {
+            state.players.push(candidate);
+            addedCount++;
+          }
+        });
+
+        if (addedCount > 0) {
+          playSleighChime('sparkle');
+          if (state.pairings && state.pairings.length > 0) {
+            state.pairings = [];
+            state.roundTime = null;
+            showToast('เพิ่มรายชื่อแล้ว! กดปุ่ม "เขย่าถุงซานต้าสุ่มจับฉลาก" เพื่อจับคู่ใหม่ได้เลย');
+          } else if (duplicateNames.length === 0) {
+            showToast('🎄 เพิ่มชื่อเรียบร้อยแล้ว (' + state.players.length + ' คน)');
+          }
+          saveState();
+          renderAdminView();
+        }
+
+        if (duplicateNames.length > 0) {
+          showToast('⚠️ มีชื่อ "' + duplicateNames.join(', ') + '" อยู่ในรายการแล้ว');
+        }
+      }
+
+      function removePlayerAt(index) {
+        const removedName = state.players[index];
+        state.players.splice(index, 1);
+        if (state.pairings && state.pairings.length > 0) {
+          state.pairings = [];
+          state.roundTime = null;
+        }
+        saveState();
+        renderAdminView();
+        showToast('ลบชื่อ "' + removedName + '" ออกแล้ว');
+      }
+
+      formAddPlayer.addEventListener('submit', function (e) {
+        e.preventDefault();
+        addPlayersFromInput(inputPlayerName.value);
+        inputPlayerName.value = '';
+        inputPlayerName.focus();
+      });
+
+      btnClearAll.addEventListener('click', function () {
+        if (state.players.length === 0) return;
+        const confirmed = window.confirm('ต้องการลบรายชื่อทั้งหมด (' + state.players.length + ' คน) เพื่อเริ่มเล่นรอบใหม่ใช่ไหมครับ?');
+        if (!confirmed) return;
+
+        state.players = [];
+        state.pairings = [];
+        state.roundTime = null;
+        saveState();
+        renderAdminView();
+        showToast('🧹 ล้างรายชื่อทั้งหมดเรียบร้อย พร้อมเริ่มรอบใหม่!');
+      });
+
+      // Santa's Magic Sack Shuffle Ceremony
+      btnDrawRandom.addEventListener('click', function () {
+        if (state.players.length < 2) return;
+
+        if (state.pairings && state.pairings.length > 0) {
+          const confirmed = window.confirm('ต้องการเขย่าถุงสุ่มจับฉลากใหม่ใช่ไหมครับ? (ลิงก์ชุดเดิมจะถูกแทนที่ด้วยผลการสุ่มรอบใหม่)');
+          if (!confirmed) return;
+        }
+
+        // Open Santa Sack Shuffle Modal
+        elSantaShuffleModal.classList.remove('hidden');
+        let tick = 0;
+        const shuffleInterval = setInterval(function () {
+          const randomName = state.players[tick % state.players.length];
+          elWhirlingNamePill.textContent = '🎁 กำลังสลับชื่อ: ' + randomName + ' ✨';
+          playBellNote(523.25 + (tick % 5) * 80, 0.14, 0.09);
+          tick++;
+        }, 160);
+
+        setTimeout(function () {
+          clearInterval(shuffleInterval);
+          elSantaShuffleModal.classList.add('hidden');
+
+          const now = new Date();
+          const timeStr = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' }) + ' น.';
+
+          state.pairings = createRandomCyclePairings(state.players, {
+            title: state.title,
+            budget: state.budget,
+            date: state.date
+          });
+          state.roundTime = timeStr;
+          saveState();
+          renderAdminView();
+          playSleighChime('fanfare');
+          triggerConfettiBurst();
+          triggerSantaFlyBy();
+          showToast('🎉 ซานต้าสุ่มจับคู่สำเร็จ! ส่งลิงก์ให้เพื่อนทาง LINE ได้เลย');
+
+          setTimeout(function () {
+            elLinksResultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 150);
+        }, 1900);
+      });
+
+      btnCopyAllLinks.addEventListener('click', function () {
+        if (!state.pairings || state.pairings.length === 0) return;
+
+        const lines = [
+          '🎄✨ ประกาศลิงก์จับฉลากของขวัญคริสต์มาส ✨🎄',
+          '💰 ' + state.budget,
+          '📅 ' + state.date,
+          '⚠️ กดเปิดเฉพาะลิงก์ชื่อของตัวเองเท่านั้นนะ ห้ามแอบเปิดของเพื่อน! 🤫🎁',
+          '────────────────────'
+        ];
+
+        state.pairings.forEach(function (item, idx) {
+          const url = buildPlayerLink(item.token);
+          lines.push((idx + 1) + '. 🎅 ' + item.giver + ':\n' + url + '\n');
+          item.sent = true;
+        });
+
+        playSleighChime('fanfare');
+        saveState();
+        renderAdminView();
+        copyTextToClipboard(
+          lines.join('\n'),
+          '📢 คัดลอกลิงก์รวมทุกคนแล้ว! นำไปวางในกลุ่ม LINE ได้เลย'
+        );
+      });
+
+      btnToggleSettings.addEventListener('click', function () {
+        elSettingsPanel.classList.toggle('open');
+      });
+
+      btnSaveSettings.addEventListener('click', function () {
+        state.title = inputTitle.value.trim() || DEFAULT_STATE.title;
+        state.budget = inputBudget.value.trim() || DEFAULT_STATE.budget;
+        state.date = inputDate.value.trim() || DEFAULT_STATE.date;
+
+        if (state.pairings && state.pairings.length > 0) {
+          state.pairings = state.pairings.map(function (item) {
+            const decoded = decodeSecretToken(item.token);
+            if (!decoded) return item;
+            return {
+              giver: item.giver,
+              sent: item.sent,
+              token: encodeSecretToken({
+                g: decoded.g,
+                r: decoded.r,
+                t: state.title,
+                b: state.budget,
+                d: state.date
+              })
+            };
+          });
+        }
+
+        saveState();
+        renderAdminView();
+        elSettingsPanel.classList.remove('open');
+        showToast('💾 บันทึกรายละเอียดงานเรียบร้อยแล้ว!');
+      });
+
+      /* =====================================================
+         9. PLAYER 3-STEP UNBOXING & FROST SCRATCH CARD
+         ===================================================== */
+      function initFrostScratchCanvas() {
+        if (!elFrostCanvas) return;
+        const rect = elTargetNameFrame.getBoundingClientRect();
+        const width = Math.max(280, Math.floor(rect.width || 340));
+        const height = Math.max(100, Math.floor(rect.height || 108));
+        elFrostCanvas.width = width;
+        elFrostCanvas.height = height;
+
+        const ctx = elFrostCanvas.getContext('2d');
+        // Draw festive glittery snow frost layer
+        const grad = ctx.createLinearGradient(0, 0, width, height);
+        grad.addColorStop(0, '#dff2f7');
+        grad.addColorStop(0.5, '#ffffff');
+        grad.addColorStop(1, '#cbe7f0');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, width, height);
+
+        // Snowflakes & instructions on frost layer
+        ctx.fillStyle = '#1b5266';
+        ctx.font = '600 15px Kanit, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('❄️ ใช้นิ้วถูขูดหิมะออกเพื่อดูชื่อเพื่อน! ❄️', width / 2, height / 2 - 4);
+        ctx.font = '400 12px Kanit, sans-serif';
+        ctx.fillStyle = '#43798c';
+        ctx.fillText('(หรือกดปุ่มปัดหิมะด้านล่าง)', width / 2, height / 2 + 18);
+
+        let isDrawing = false;
+        let scratchMoves = 0;
+
+        function scratchAt(x, y) {
+          ctx.globalCompositeOperation = 'destination-out';
+          ctx.beginPath();
+          ctx.arc(x, y, 26, 0, Math.PI * 2);
+          ctx.fill();
+
+          scratchMoves++;
+          if (scratchMoves % 6 === 0) {
+            playSleighChime('sparkle');
+          }
+          if (scratchMoves > 28) {
+            clearFrostCompletely();
+          }
+        }
+
+        function getLocalCoords(e) {
+          const r = elFrostCanvas.getBoundingClientRect();
+          const clientX = e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX;
+          const clientY = e.touches && e.touches[0] ? e.touches[0].clientY : e.clientY;
+          return {
+            x: clientX - r.left,
+            y: clientY - r.top,
+            pageX: clientX,
+            pageY: clientY
+          };
+        }
+
+        elFrostCanvas.addEventListener('mousedown', function (e) {
+          isDrawing = true;
+          const pt = getLocalCoords(e);
+          scratchAt(pt.x, pt.y);
+        });
+        window.addEventListener('mouseup', function () { isDrawing = false; });
+        elFrostCanvas.addEventListener('mousemove', function (e) {
+          if (!isDrawing) return;
+          const pt = getLocalCoords(e);
+          scratchAt(pt.x, pt.y);
+          spawnTouchSparkles(pt.pageX, pt.pageY, 2);
+        });
+
+        elFrostCanvas.addEventListener('touchstart', function (e) {
+          isDrawing = true;
+          const pt = getLocalCoords(e);
+          scratchAt(pt.x, pt.y);
+        }, { passive: true });
+        elFrostCanvas.addEventListener('touchmove', function (e) {
+          if (!isDrawing) return;
+          const pt = getLocalCoords(e);
+          scratchAt(pt.x, pt.y);
+          spawnTouchSparkles(pt.pageX, pt.pageY, 2);
+        }, { passive: true });
+      }
+
+      function clearFrostCompletely() {
+        if (!elFrostCanvas || elFrostCanvas.classList.contains('cleared')) return;
+        elFrostCanvas.classList.add('cleared');
+        elScratchHelperBar.classList.add('hidden');
+        playSleighChime('fanfare');
+        triggerConfettiBurst();
+      }
+
+      function initPlayerRevealMode(decodedPayload) {
+        elAdminView.classList.add('hidden');
+        btnToggleSettings.classList.add('hidden');
+        elSettingsPanel.classList.remove('open');
+        elPlayerView.classList.remove('hidden');
+        elFooterAdminSwitch.classList.remove('hidden');
+        elLinkGoAdmin.href = getBasePageUrl();
+
+        renderEventHeader({
+          title: decodedPayload.t || DEFAULT_STATE.title,
+          budget: decodedPayload.b || DEFAULT_STATE.budget,
+          date: decodedPayload.d || DEFAULT_STATE.date
+        });
+        renderLivingTreeOrnaments([decodedPayload.g]);
+
+        elRevealGiverName.textContent = 'คุณ ' + decodedPayload.g;
+        elRevealIdentityWarning.textContent =
+          '⚠️ หากคุณไม่ใช่ "' + decodedPayload.g + '" กรุณาปิดหน้านี้แล้วกดลิงก์ชื่อตัวเองใน LINE นะ!';
+        btnOpenGift.textContent = '🎀 แตะครั้งที่ 1: ดึงปมริบบิ้นสีทอง (' + decodedPayload.g + ')';
+        elRevealReceiverName.textContent = '🎁 ' + decodedPayload.r + ' 🎁';
+
+        let unboxStep = 0;
+
+        function handleUnboxStep() {
+          unboxStep++;
+
+          if (unboxStep === 1) {
+            playSleighChime('unboxStep');
+            elGiftBoxTrigger.classList.add('step-1');
+            elUnboxStepBadge.textContent = '⭐⭐ ขั้นที่ 2 / 3 : เขย่ากล่องฟังเสียงของขวัญข้างใน!';
+            btnOpenGift.textContent = '🔔 แตะครั้งที่ 2: เขย่ากล่องของขวัญเลย!';
+            spawnTouchSparkles(window.innerWidth / 2, window.innerHeight * 0.45, 14);
+          } else if (unboxStep === 2) {
+            playSleighChime('unboxStep');
+            elGiftBoxTrigger.classList.remove('step-1');
+            elGiftBoxTrigger.classList.add('step-2');
+            elUnboxStepBadge.textContent = '⭐⭐⭐ ขั้นที่ 3 / 3 : พร้อมแล้ว! เปิดฝากล่องเลย!';
+            btnOpenGift.textContent = '🎉 แตะครั้งที่ 3: เปิดฝากล่องดูชื่อเพื่อน!';
+            spawnTouchSparkles(window.innerWidth / 2, window.innerHeight * 0.45, 20);
+          } else if (unboxStep === 3) {
+            playSleighChime('fanfare');
+            elGiftBoxTrigger.classList.remove('step-2');
+            elGiftBoxTrigger.classList.add('opening');
+            btnOpenGift.disabled = true;
+            btnOpenGift.textContent = '✨ กำลังเปิดกล่องของขวัญ... ✨';
+            triggerConfettiBurst();
+
+            setTimeout(function () {
+              elGiftStageWrap.classList.add('hidden');
+              elRevealResultCard.classList.add('visible');
+              initFrostScratchCanvas();
+            }, 520);
+          }
+        }
+
+        elGiftBoxTrigger.addEventListener('click', handleUnboxStep);
+        elGiftBoxTrigger.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleUnboxStep();
+          }
+        });
+        btnOpenGift.addEventListener('click', handleUnboxStep);
+
+        btnClearFrost.addEventListener('click', function () {
+          clearFrostCompletely();
+        });
+
+        btnToggleBlur.addEventListener('click', function () {
+          clearFrostCompletely();
+          const isBlurred = elTargetNameFrame.classList.toggle('blurred');
+          btnToggleBlur.textContent = isBlurred
+            ? '👀 กดแสดงชื่อเพื่อนอีกครั้ง'
+            : '🙈 กดซ่อนชื่อชั่วคราว (กันคนข้างๆ แอบมอง)';
+        });
+      }
+
+      /* =====================================================
+         10. INTERACTIVE SNOW GLOBE, FULL MOON & PARACHUTE GIFTS
+         ===================================================== */
+      const elSantaTrack = document.getElementById('santa-sky-track');
+      const elHollyBellTrigger = document.getElementById('holly-bell-trigger');
+      const elSnowGlobeDome = document.getElementById('snow-globe-dome');
+      const elGlobeFullMoon = document.getElementById('globe-full-moon');
+      const elBrassPlaque = document.getElementById('brass-plaque-status');
+      const elParachuteLayer = document.getElementById('parachute-gifts-layer');
+
+      const PARACHUTE_SURPRISES = [
+        '💡 ไอเดียของขวัญงบ 500฿: แก้วเก็บความเย็นสีคริสต์มาส + โกโก้พรีเมียม ☕',
+        '💡 ไอเดียของขวัญงบ 500฿: เทียนหอมกลิ่นสนคริสต์มาส & วานิลลาอุ่นๆ 🕯️',
+        '🔮 ดวงคริสต์มาสของคุณ: ปีนี้จะได้ของขวัญชิ้นที่ถูกใจจนต้องยิ้มแก้มปริ! ✨',
+        '💡 ไอเดียของขวัญงบ 500฿: หมอนผ้าห่มตุ๊กตากวางเรนเดียร์นุ่มฟู 🦌',
+        '💡 ไอเดียของขวัญงบ 500฿: บอร์ดเกมปาร์ตี้พกพาไว้เล่นตอนนัดกินข้าว 19 ธ.ค.! 🎲',
+        '🔮 คำทำนายจากซานต้า: คนที่จับได้ชื่อคุณกำลังตั้งใจเลือกของขวัญให้สุดๆ! 🎅',
+        '💡 ไอเดียของขวัญงบ 500฿: เซ็ตครีมทามือหอมๆ + ถุงเท้าคริสต์มาสน่ารักๆ 🧦'
+      ];
+
+      function spawnParachuteGift(customLeftPercent) {
+        if (!elParachuteLayer) return;
+
+        const item = document.createElement('div');
+        item.className = 'parachute-gift-item';
+        const leftPos = typeof customLeftPercent === 'number'
+          ? customLeftPercent
+          : Math.floor(Math.random() * 74) + 10;
+        item.style.left = leftPos + 'vw';
+
+        const giftIcons = ['🎁', '🧸', '🎄', '🔔'];
+        const chosenBox = giftIcons[Math.floor(Math.random() * giftIcons.length)];
+
+        item.innerHTML =
+          '<span class="parachute-canopy">🪂</span>' +
+          '<span class="parachute-box">' + chosenBox + '</span>' +
+          '<span class="parachute-tag">แตะเก็บของขวัญ!</span>';
+
+        item.addEventListener('click', function (e) {
+          e.stopPropagation();
+          playSleighChime('fanfare');
+          spawnTouchSparkles(e.clientX || window.innerWidth / 2, e.clientY || 200, 18);
+          const surprise = PARACHUTE_SURPRISES[Math.floor(Math.random() * PARACHUTE_SURPRISES.length)];
+          showToast(surprise);
+          item.remove();
+        });
+
+        elParachuteLayer.appendChild(item);
+        setTimeout(function () {
+          if (item && item.parentNode) item.remove();
+        }, 10600);
+      }
+
+      let isSantaFlying = false;
+      function triggerSantaFlyBy() {
+        if (isSantaFlying) return;
+        isSantaFlying = true;
+        elSantaTrack.classList.remove('flying');
+        void elSantaTrack.offsetWidth;
+        elSantaTrack.classList.add('flying');
+        playSleighChime('fanfare');
+
+        // Drop 3 Parachute Mystery Gifts across the sky as Santa flies by!
+        setTimeout(function () { spawnParachuteGift(18); }, 600);
+        setTimeout(function () { spawnParachuteGift(52); }, 1600);
+        setTimeout(function () { spawnParachuteGift(78); }, 2600);
+
+        setTimeout(function () {
+          elSantaTrack.classList.remove('flying');
+          isSantaFlying = false;
+        }, 7600);
+      }
+
+      if (elGlobeFullMoon) {
+        elGlobeFullMoon.addEventListener('click', function (e) {
+          e.stopPropagation();
+          triggerSantaFlyBy();
+          spawnTouchSparkles(e.clientX || window.innerWidth / 2, e.clientY || 120, 14);
+          showToast('🌕🦌 ซานต้าบินผ่านดวงจันทร์และปล่อยของขวัญร่มชูชีพลงมาแล้ว! แตะเก็บได้เลย!');
+        });
+      }
+
+      // Ring Holly Golden Bells on Card Roof
+      elHollyBellTrigger.addEventListener('click', function (e) {
+        elHollyBellTrigger.classList.remove('ringing');
+        void elHollyBellTrigger.offsetWidth;
+        elHollyBellTrigger.classList.add('ringing');
+        playSleighChime('fanfare');
+        spawnTouchSparkles(e.clientX || window.innerWidth / 2, e.clientY || 120, 14);
+        showToast('🔔 กรุ๊งกริ๊ง~ ขอให้คริสต์มาสปีนี้มีแต่รอยยิ้ม!');
+      });
+
+      // Corner Stocking & Candy Cane
+      document.getElementById('prop-stocking').addEventListener('click', function (e) {
+        playSleighChime('sparkle');
+        spawnTouchSparkles(e.clientX, e.clientY, 12);
+        showToast('🧦 ถุงเท้าซานต้าพร้อมรับของขวัญงบ 500 บาทแล้ว!');
+      });
+      document.getElementById('prop-candycane').addEventListener('click', function (e) {
+        playSleighChime('sparkle');
+        spawnTouchSparkles(e.clientX, e.clientY, 12);
+        showToast('🍬 ลูกกวาดคริสต์มาสหวานๆ เตรียมนับถอยหลัง 19 ธ.ค. 2569!');
+      });
+
+      // Hanging Christmas Light Bulbs
+      document.querySelectorAll('.light-bulb').forEach(function (bulb) {
+        bulb.addEventListener('click', function (e) {
+          const freq = parseFloat(bulb.getAttribute('data-note')) || 659.25;
+          playBellNote(freq, 0.5, 0.14);
+          spawnTouchSparkles(e.clientX, e.clientY, 8);
+        });
+      });
+
+      // Interactive Bottom Village Props
+      function bindVillageProp(elId, messages) {
+        const el = document.getElementById(elId);
+        if (!el) return;
+        const tooltip = el.querySelector('.prop-tooltip');
+        el.addEventListener('click', function (e) {
+          el.classList.remove('jumping');
+          void el.offsetWidth;
+          el.classList.add('jumping');
+          el.classList.add('show-bubble');
+          if (tooltip && messages && messages.length) {
+            tooltip.textContent = messages[Math.floor(Math.random() * messages.length)];
+          }
+          document.body.classList.toggle('disco-lights');
+          playSleighChime('unboxStep');
+          spawnTouchSparkles(e.clientX || window.innerWidth / 2, (e.clientY || window.innerHeight - 60), 14);
+          setTimeout(function () {
+            el.classList.remove('show-bubble');
+          }, 2600);
+        });
+      }
+
+      bindVillageProp('prop-tree-left', ['🎄 เปลี่ยนจังหวะไฟต้นสน!', '🌟 Merry Christmas!', '🎁 ซื้อของขวัญอะไรดีน้า~']);
+      bindVillageProp('prop-snowman', ['⛄ เย้! หิมะเย็นชื่นใจ~', '🧣 อย่าลืมแต่งตัวธีมคริสต์มาสนะ!', '❄️ ลุ้นจังใครจะได้ของเรา!']);
+      bindVillageProp('prop-cabin', ['🏠 19 ธ.ค. 69 นัดกินข้าวกัน!', '💰 งบ 500 บาท จัดเต็ม!', '🍗 เตรียมท้องรอมื้อพิเศษเลย!']);
+      bindVillageProp('prop-tree-right', ['✨ ขอให้ได้ของขวัญถูกใจ!', '🎅 Ho Ho Ho! สุขสันต์วันคริสต์มาส!', '🔔 แตะพระจันทร์ในลูกแก้วเรียกซานต้าได้นะ!']);
+
+      /* =====================================================
+         11. SNOW GLOBE SHAKE, BLIZZARD MODE & SPARKLE TRAIL
+         ===================================================== */
+      let isBlizzard = false;
+      const touchSparkles = [];
+
+      function spawnTouchSparkles(x, y, count) {
+        const symbols = ['❄️', '✨', '⭐', '🎄', '🔔'];
+        for (let i = 0; i < (count || 4); i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 2.6 + 0.6;
+          touchSparkles.push({
+            x: x,
+            y: y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 0.8,
+            size: Math.random() * 11 + 11,
+            alpha: 1,
+            symbol: symbols[Math.floor(Math.random() * symbols.length)]
+          });
+        }
+      }
+
+      function shakeSnowGlobeAndToggleBlizzard(e) {
+        if (elSnowGlobeDome) {
+          elSnowGlobeDome.classList.remove('shaking');
+          void elSnowGlobeDome.offsetWidth;
+          elSnowGlobeDome.classList.add('shaking');
+        }
+        isBlizzard = !isBlizzard;
+        document.body.classList.toggle('blizzard-mode', isBlizzard);
+        playSleighChime('unboxStep');
+        const cx = (e && e.clientX) ? e.clientX : window.innerWidth / 2;
+        const cy = (e && e.clientY) ? e.clientY : 160;
+        spawnTouchSparkles(cx, cy, 18);
+        spawnParachuteGift();
+        showToast(
+          isBlizzard
+            ? '🔮🌨️ เขย่าลูกแก้วหิมะ! เปิดโหมดพายุหิมะแสงเหนือ + ปล่อยของขวัญร่มชูชีพ!'
+            : '🔮❄️ เขย่าลูกแก้วหิมะ! กลับสู่โหมดหิมะโปรยอบอุ่น'
+        );
+      }
+
+      if (elSnowGlobeDome) {
+        elSnowGlobeDome.addEventListener('click', shakeSnowGlobeAndToggleBlizzard);
+      }
+      if (elBrassPlaque) {
+        elBrassPlaque.addEventListener('click', shakeSnowGlobeAndToggleBlizzard);
+      }
+
+      function initSnowAndSparkleCanvas() {
+        const canvas = document.getElementById('snow-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width = (canvas.width = window.innerWidth);
+        let height = (canvas.height = window.innerHeight);
+
+        window.addEventListener('resize', function () {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        });
+
+        // Spawn sparkles on pointer move / touch
+        let lastTrailTime = 0;
+        window.addEventListener('mousemove', function (e) {
+          const now = Date.now();
+          if (now - lastTrailTime > 55) {
+            spawnTouchSparkles(e.clientX, e.clientY, 1);
+            lastTrailTime = now;
+          }
+        });
+        window.addEventListener('touchstart', function (e) {
+          if (e.touches && e.touches[0]) {
+            spawnTouchSparkles(e.touches[0].clientX, e.touches[0].clientY, 5);
+          }
+        }, { passive: true });
+
+        const flakes = [];
+        for (let i = 0; i < 85; i++) {
+          flakes.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            r: Math.random() * 3.4 + 1.2,
+            speedY: Math.random() * 0.85 + 0.4,
+            speedX: (Math.random() - 0.5) * 0.5,
+            opacity: Math.random() * 0.6 + 0.25
+          });
+        }
+
+        function drawFrame() {
+          ctx.clearRect(0, 0, width, height);
+
+          const activeFlakeCount = isBlizzard ? flakes.length : Math.min(48, flakes.length);
+          const speedMult = isBlizzard ? 2.4 : 1;
+          const windX = isBlizzard ? 1.35 : 0;
+
+          for (let i = 0; i < activeFlakeCount; i++) {
+            const f = flakes[i];
+            ctx.beginPath();
+            ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 253, 247, ' + f.opacity + ')';
+            ctx.fill();
+
+            f.y += f.speedY * speedMult;
+            f.x += f.speedX + windX;
+
+            if (f.y > height + 8) {
+              f.y = -8;
+              f.x = Math.random() * width;
+            }
+            if (f.x > width + 8) f.x = -8;
+            if (f.x < -8) f.x = width + 8;
+          }
+
+          // Render interactive touch/cursor sparkles
+          for (let j = touchSparkles.length - 1; j >= 0; j--) {
+            const sp = touchSparkles[j];
+            sp.x += sp.vx;
+            sp.y += sp.vy;
+            sp.vy += 0.04;
+            sp.alpha -= 0.024;
+
+            if (sp.alpha <= 0.02) {
+              touchSparkles.splice(j, 1);
+              continue;
+            }
+
+            ctx.save();
+            ctx.globalAlpha = sp.alpha;
+            ctx.font = Math.floor(sp.size) + 'px sans-serif';
+            ctx.fillText(sp.symbol, sp.x, sp.y);
+            ctx.restore();
+          }
+
+          requestAnimationFrame(drawFrame);
+        }
+
+        drawFrame();
+      }
+
+      function triggerConfettiBurst() {
+        const canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const width = (canvas.width = window.innerWidth);
+        const height = (canvas.height = window.innerHeight);
+
+        const colors = ['#D93438', '#F5B83D', '#1E6B41', '#FFD166', '#FFFDF7', '#4ADE80'];
+        const particles = [];
+
+        for (let i = 0; i < 95; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 9.5 + 4;
+          particles.push({
+            x: width / 2,
+            y: height * 0.42,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 4.5,
+            size: Math.random() * 8 + 5,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rot: Math.random() * 360,
+            rotSpeed: (Math.random() - 0.5) * 12,
+            alpha: 1
+          });
+        }
+
+        function renderConfetti() {
+          ctx.clearRect(0, 0, width, height);
+          let active = false;
+
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            if (p.alpha <= 0.02) continue;
+            active = true;
+
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.25;
+            p.vx *= 0.985;
+            p.rot += p.rotSpeed;
+            if (p.y > height * 0.75) {
+              p.alpha -= 0.025;
+            }
+
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, p.alpha);
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rot * Math.PI) / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.65);
+            ctx.restore();
+          }
+
+          if (active) {
+            requestAnimationFrame(renderConfetti);
+          } else {
+            ctx.clearRect(0, 0, width, height);
+          }
+        }
+
+        renderConfetti();
+      }
+
+      /* =====================================================
+         12. BOOTSTRAP APPLICATION
+         ===================================================== */
+      initSnowAndSparkleCanvas();
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const giftToken = urlParams.get('gift');
+
+      if (giftToken) {
+        const decoded = decodeSecretToken(giftToken);
+        if (decoded && decoded.g && decoded.r) {
+          initPlayerRevealMode(decoded);
+        } else {
+          showToast('⚠️ ลิงก์ไม่สมบูรณ์หรือถูกตัดทอน กรุณาขอลิงก์ใหม่อีกครั้ง');
+          renderAdminView();
+        }
+      } else {
+        renderAdminView();
+      }
+    })();
+  </script>
+</body>
+</html>
